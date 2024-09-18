@@ -8,10 +8,9 @@
  */
 @import url(https://blade04208.github.io/libadcord/src/font.css);
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/DiscordRecolor/DiscordRecolor.css);
-
 :root {
   --settingsicons: 1;
-  --font: "Cantarell", "Noto Sans"
+  --font: "Cantarell", "Noto Sans";
   --accentcolor: 53,132,228;
   --accentcolor2: 145,65,172;
   --linkcolor: 129,208,255;
