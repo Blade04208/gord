@@ -1,1 +1,269 @@
 @import url(https://blade04208.github.io/libadcord/src/DiscordRecolor.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/SettingsModal/SettingsModal.css);
+
+:root {
+    --settingswidth: 1000;
+    --settingsheight: 85;
+    --font-code: "Source Code Pro" !important;
+    --columns: 1;
+    --guildsize: 45;
+    --guildgap: 5;
+    --button--underline-color: transparent !important;
+    --elevation-low: unset !important;
+    --scrollbar-auto-thumb: rgba(255, 255, 255, 0.1) !important;
+    --scrollbar-auto-track: transparent !important;
+    --channeltextarea-background: var(--background-secondary-alt) !important;
+}
+
+[class^="sidebar_"] {
+    width: 280px;
+ >[class^="container_"] {
+    border-right: 1px solid #1f1f1f;
+  }
+}
+nav[class^="wrapper_"] { /* WHY THE FUCK DOES THIS WORK BUT NOT [class^="guilds_"]????????? */
+    border-right: 1px solid #1f1f1f!important;
+}
+.focusTarget__1efcf {
+    display: none;
+}
+
+[class^="banner"] {
+    width: 280px !important;
+}
+
+[data-list-item-id^="channels___"],
+li>[class^="containerDefault_"]>[class^="basicChannelRowLink__3b042"] {
+    padding: 10px 10px;
+    border-radius: 6px !important;
+}
+
+.theme-dark .themed_b152d4 {
+    background: transparent;
+}
+
+.nowPlayingColumn_b025fe {
+    background-color: transparent !important;
+}
+
+.container__26baa {
+    min-height: 45px !important;
+}
+
+.iconWrapper_de6cd1,
+icon_ae0b42 {
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.banner_d5fdb1 {
+    width: 100% !important;
+}
+
+button {
+    height: auto !important;
+    width: auto !important;
+    border-radius: 100vw !important;
+    padding: 10px 20px !important;
+}
+
+[class^="userInfo_"]>button {
+    height: 36px !important;
+}
+
+
+
+
+[class^=container]>[class*=buttons]
+
+/* Change the quick actions */
+    {
+    justify-content: space-evenly !important;
+    /* Let them breathe */
+}
+
+[class^=container]>[class*=buttons] button {
+    padding: 12.5px 12.5px !important;
+    border-radius: 1.25vw !important;
+}
+
+[class^=avatarWrapper]
+
+/* Change the user box */
+    {
+    max-width: 100px;
+    border-radius: 1.25vw !important;
+}
+
+:is(main, section)[class^=chatContent]>form,
+form>div[class^=submitContainer] {
+    /* align chatbox */
+    padding: 0px;
+
+    >div>div[class^=channelTextArea] {
+        margin: 0px !important;
+
+        >div[class^=scrollableContainer] {
+        top: -16px;
+        min-height: 49px;
+        padding-top: 4px;
+        border-radius: 0px;
+        }
+    }
+
+    /* align forum channel thing */
+    >div {
+        margin-bottom: 0px;
+        border-radius: 0px;
+    }
+
+    /* move slowmode/typing indicator to match */
+    >div[class^=typing] {
+        top: -24px;
+        right: calc(var(--custom-index-scrollbar-margin) * 2 + var(--custom-index-scrollbar-width));
+        margin-left: auto;
+        width: fit-content;
+        padding-left: 2px;
+        padding-right: 9px;
+        border-radius: 8px 8px 0px 0px;
+        background-color: var(--channeltextarea-background);
+    }
+
+    /* make scrollbar meet chatbox */
+    &::after {
+        display: none;
+    }
+
+    /* fix replies */
+    >div>div>div[class^=attachedBars] {
+        min-height: unset !important;
+        padding-bottom: 4px;
+    }
+}
+
+/* jump to present */
+div[class^=jumpToPresentBar] {
+    left: 0;
+    right: unset;
+    border-radius: 0px 8px 0px 0px;
+    background-color: var(--channeltextarea-background);
+
+    >button[class^=barButtonMain] {
+        flex: 0 0 auto;
+        display: none;
+    }
+}
+
+[class^="channelAppLauncher_"] {
+    display: none;
+}
+
+[class^="channelTextArea_"] .expression-picker-chat-input-button>button,
+button[aria-label="Send a gift"] {
+    padding: 10px 5px !important;
+}
+
+.channel_c91bad {
+    max-width: unset;
+    border-radius: 8px !important;
+}
+
+[class^="searchBarComponent_f0963d"] {
+    border-radius: 7.5px !important;
+    padding: 5px 31.22% 5px 10px !important;
+    color: #999999 !important;
+}
+
+[class^="iconContainer_"] svg,
+[class^="linkTop_"] [class^="name_"] {
+    color: white !important;
+}
+
+[class^="children_"]:not(:has([class^="topic_"])) [class^="titleWrapper_fc4f04"] {
+    width: 100%;
+
+    >h1 {
+        justify-content: center;
+    }
+}
+
+[class^="children_"]:has([class^="topic_"]) {
+    flex-direction: column;
+
+    .titleWrapper_fc4f04 {
+        width: 50%;
+
+        >h1 {
+            justify-content: center;
+            font-size: 15px;
+            overflow: visible;
+        }
+    }
+
+    [class^="topic_"] {
+        line-height: 13px;
+        font-size: 13px;
+        color: #999999;
+        overflow: visible;
+    }
+
+    [class^="divider_"] {
+        display: none;
+    }
+}
+
+[class^="title_"] [class^="children_"] [class^="iconWrapper_"] {
+    display: none;
+}
+
+[class^=linkTop_] [class^=icon_]{
+ width: 16px!important;
+ height: 16px!important;
+}
+
+[class^="toolbar_"] [class^="icon"] {
+    width: 32px;
+    height: 32px;
+    align-content: center;
+    border-radius: 6px;
+    margin: 0 4px;
+    >svg {
+        width: 20px;
+        height: 20px;
+       margin: auto;
+       overflow: visible;
+        contain: none!important;
+       >path {
+            fill: white!important;
+        }
+    }
+    svg > foreignObject > svg {
+        width: 20px;
+        height: 20px;
+        margin: auto;
+        overflow: visible!important;
+        overflow-clip-margin: unset!important;
+       >path {
+            fill: white!important;
+        }
+    }
+    >foreignObject {
+        mask: none!important;
+    }
+}
+[class^="iconWrapper_"]:hover {
+    background-color: rgba(255, 255, 255, 0.1)!important;
+}
+
+[class^="iconBadge_"]:not([class*="base"]) {
+    transform: translateY(2px) translateX(7px);
+    z-index: -500;
+    opacity: 0.25;
+}
+
+[class^="icon"] foreignObject {
+    mask: none;
+    width: 20px;
+    height: 20px;
+    transform: scale(1.25) translateY(2px) translateX(5.75px);
+}
