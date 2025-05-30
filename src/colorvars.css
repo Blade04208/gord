@@ -1,22 +1,21 @@
 .theme-dark {
-    --gnome-toolbar-padding: 6px;
-    --gnome-toolbar-spacing: 6px;
-    --gnome-button-radius: 6px;
-    --gnome-button-size: 34px;
-    --gnome-entry-radius: var(--gnome-button-radius);
-    --gnome-entry-height: var(--gnome-button-size);
-    --gnome-card-radius: calc(var(--gnome-button-radius) + 6px);
-    --gnome-menu-radius: 6px;
-    --gnome-menu-padding: 6px;
-    --gnome-menu-item-padding: 12px;
-    --gnome-popover-radius: calc(var(--gnome-button-radius) + 6px);
-    --gnome-dialog-radius: 18px;
-    /* Alert dialog */
-    --gnome-dialog-padding: 24px;
-
-    /* Animations */
-    --gnome-animation-time: 300ms;
-    --gnome-tab-animation-time: 200ms;
+	--gnome-toolbar-padding: 6px;
+	--gnome-toolbar-spacing: 6px;
+	--gnome-button-radius: 9px;
+	--gnome-button-size: 34px;
+	--gnome-entry-radius: var(--gnome-button-radius);
+	--gnome-entry-height: var(--gnome-button-size);
+	--gnome-card-radius: 12px;
+	--gnome-menu-radius: 9px;
+	--gnome-menu-padding: 6px;
+	--gnome-menu-item-padding: 12px;
+	--gnome-popover-radius: calc(var(--gnome-menu-radius) + 6px);
+	--gnome-dialog-radius: 18px; /* Alert dialog */
+	--gnome-dialog-padding: 24px;
+	
+	/* Animations */
+	--gnome-animation-time: 300ms;
+	--gnome-tab-animation-time: 200ms;
 
     /* Colors */
     /* Pallete */
@@ -172,11 +171,64 @@
     --gnome-tabbar-identity-color-blue: var(--gnome-accent);
     --gnome-tabbar-identity-color-turquoise: #00c79a;
     --gnome-tabbar-identity-color-pink: #ff4b84;
+    /* Colors */
+		--gnome-standalone-color-oklab: max(l, 0.85) a b;
+		--gnome-destructive-bg: var(--gnome-palette-red-4);
+		--gnome-success-bg: var(--gnome-palette-green-5);
+		--gnome-warning-bg: #cd9309;
+		--gnome-error-bg: var(--gnome-palette-red-4);
+
+		--gnome-toolbar-star-button: var(--gnome-palette-yellow-1);
+
+		/* Window */
+		--gnome-window-background: #222226;
+		--gnome-window-color: white;
+		--gnome-view-background: #1e1e1e;
+		--gnome-sidebar-background: #2e2e32;
+		--gnome-secondary-sidebar-background: #28282c;
+
+		/* Card */
+		--gnome-card-background: rgba(255, 255, 255, 0.08);
+		--gnome-card-shade-color: rgba(0, 0, 6, 0.36);
+
+		/* Menu */
+		--gnome-menu-background: #36363a;
+
+		/* Header bar */
+		--gnome-headerbar-background: #2e2e32;
+		--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.9);
+
+		/* Toolbars */
+		--gnome-toolbar-icon-fill: #ffffff;
+
+		/* Tabs */
+		--gnome-tabbar-tab-hover-background: #3d3d40; /* Hardcoded color */
+		--gnome-tabbar-tab-active-background: #434346; /* Hardcoded color */
+		--gnome-tabbar-tab-active-background-contrast: #4F4F4F; /* Hardcoded color */
+		--gnome-tabbar-tab-active-hover-background: #49494d; /* Hardcoded color */
+		
+		--gnome-tabbar-identity-color-green: var(--gnome-palette-green-1);
+		--gnome-tabbar-identity-color-yellow: var(--gnome-palette-yellow-2);
+		--gnome-tabbar-identity-color-orange: var(--gnome-palette-orange-3);
+		--gnome-tabbar-identity-color-red: var(--gnome-palette-red-1);
+		--gnome-tabbar-identity-color-purple: var(--gnome-palette-purple-1);
+		
+		/* Miscellaneous */
+		--gnome-shade-color: rgba(0, 0, 6, 0.25);
+		
+		/* Text color for Firefox Logo in new private tab */
+		--gnome-private-wordmark: #FBFBFE;
+		/* New private tab background */
+		--gnome-private-in-content-page-background: #222226;
+		/* Private browsing info box */
+		--gnome-private-text-primary-color: #FBFBFE;
+		
 
     @media (prefers-reduced-motion) {
         --gnome-animation-time: 0ms;
         --gnome-tab-animation-time: 0ms;
     }
+    
 
 }
 
