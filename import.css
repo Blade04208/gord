@@ -40,13 +40,16 @@
     background-color: var(--gnome-secondary-sidebar-background) !important;
 }
 
-.guilds_c48ade, .sidebar_c48ade {
+.guilds_c48ade,
+.sidebar_c48ade {
     background-color: var(--gnome-sidebar-background) !important;
 }
 
-.guilds_c48ade, .tree_ef3116 {
-    overflow: visible!important;
+.guilds_c48ade,
+.tree_ef3116 {
+    overflow: visible !important;
 }
+
 /* .itemsContainer_ef3116{
     overflow: visible scroll;
 } */
@@ -77,22 +80,35 @@
 }
 
 /* titlebar                 - -------------------------------------------- */
-#app-mount:has(.titleBar__421ed) {
+#app-mount {
+    --custom-app-top-bar-height: 0px !important;
 
     /* Shrinks titlebar down to nothing */
-    div[class*="titleBar_"] {
-        height: 0px;
+    .bar_c38106 {
+        min-height: 0px !important;
+        height: 0px !important;
         margin: 0px;
         gap: 4px;
     }
 
+    .trailing_c38106 {
+        position: fixed !important;
+        top: 30px;
+        right: 12px;
+        z-index: 200;
+        &>* {
+        -webkit-app-region: no-drag !important;
+        }
+    }
+
     /* Removes the "Discord" text on the top left of the screen */
-    div[class*="wordmark_"] {
+    .title_c38106,
+    .winButtonsWithDivider_c38106::before {
         display: none;
     }
 
     /* Scale the _ □ X buttons to match top bar icons */
-    div[class*=winButton_] {
+    .winButton_c38106 {
         top: 10px;
         right: 13px;
         height: 26px;
@@ -111,24 +127,22 @@
         }
     }
 
-    div[class*=winButton_]:hover {
+    .winButton_c38106:hover {
 
         background-color: var(--gnome-button-hover-background);
     }
 
-    div[class*=winButtonMinMax_] {
+    .winButtonMinMax_c38106 {
         display: none;
     }
 
     /* small hack to avoid https://github.com/electron/electron/issues/1354 */
-    [class^="winButtonClose_"],
-    [class^="closeButton_"] {
+    .winButtonClose_c38106 {
         -webkit-app-region: no-drag;
     }
 
     div[class^="upperContainer_"] {
-        -webkit-app-region: drag;
-        width: calc(100% - 40px);
+        width: calc(100% - 116px);
     }
 
     /* revert offset when thread/forum channel is open */
@@ -136,9 +150,6 @@
         width: 100%;
     }
 
-    [class^="subtitleContainer_"] {
-        -webkit-app-region: drag;
-    }
 }
 
 /*subtitleheader ------------------------------        ------------ -- -*/
@@ -217,7 +228,7 @@
             }
         }
 
-        [class^="topic_"] {
+        .topic__6ec1a {
             line-height: 13px;
             font-size: 13px;
             color: #999999;
@@ -251,6 +262,9 @@
 }
 
 .search__97492:not(.open__97492) {
+    overflow: hidden;
+    border-radius: var(--gnome-button-radius);
+
     &>.searchBar__97492 {
         width: var(--gnome-button-size);
         background: transparent;
@@ -270,7 +284,7 @@
             align-content: center;
             pointer-events: all !important;
             padding: 0px;
-            transform: scale(1) translate(-2px, 1px);
+            transform: scale(1) translate(-8px, -2px);
             max-width: none;
             min-width: var(--gnome-button-size);
 
@@ -336,16 +350,20 @@
         width: 100%;
     }
 }
-
+.scroller__99e7c{
+    margin-bottom: var(--custom-app-panels-height)!important;
+}
 .sidebar_c48ade {
     min-width: 280px !important;
     width: 280px !important;
     border-radius: 0px;
+
     &::after {
-        display: none!important;
+        display: none !important;
     }
+
     .sidebarList_c48ade {
-        border-radius: 0px!important;
+        border-radius: 0px !important;
     }
 }
 
@@ -369,12 +387,13 @@
 }
 
 .panels_c48ade {
-        left: 0px!important;
-        bottom: 0px!important;
-        width: 100%!important;
-        border-radius: 0px!important;
-        border: none!important;
-        background: linear-gradient(to top, var(--gnome-secondary-sidebar-background) 0%, transparent 100%)!important;
+    left: var(--custom-guild-list-width) !important;
+    bottom: 0px !important;
+    width: calc(100% - var(--custom-guild-list-width)) !important;
+    border-radius: 0px !important;
+    border: none !important;
+    background: linear-gradient(to top, var(--gnome-secondary-sidebar-background) 0%, transparent 100%) !important;
+
     .container__37e49 {
         justify-content: space-between;
     }
@@ -569,142 +588,142 @@
     border-radius: 10px;
     overflow: hidden;
     border: rgba(255, 255, 255, 0.1) 1px solid;
+}
 
-    .contentRegion__23e6b {
-        width: calc(60vw - 270px);
-        display: block;
+.contentRegion__23e6b {
+    width: calc(60vw - 270px);
+    display: block;
+    flex: none;
+
+    .toolsContainer__23e6b {
+        margin: 0;
+        position: absolute;
+        right: 0px;
+        top: 0;
         flex: none;
+        background-color: var(--background-primary);
+        padding: 0px;
+        height: 46px;
+        width: 100%;
+        box-shadow: var(--elevation-low);
 
-        .toolsContainer__23e6b {
-            margin: 0;
+        .tools__23e6b {
             position: absolute;
-            right: 0px;
-            top: 0;
-            flex: none;
-            background-color: var(--background-primary);
-            padding: 0px;
-            height: 46px;
-            width: 100%;
-            box-shadow: var(--elevation-low);
+            top: 10px;
+            right: 20px;
+            z-index: 5000;
 
-            .tools__23e6b {
-                position: absolute;
-                top: 10px;
-                right: 20px;
-                z-index: 5000;
+            .container_c2b141 {
+                .keybind_c2b141 {
+                    display: none;
+                }
 
-                .container_c2b141 {
-                    .keybind_c2b141 {
-                        display: none;
-                    }
+                .closeButton_c2b141 {
+                    border-radius: 50%;
+                    background-color: var(--gnome-button-background);
+                    color: var(--gnome-toolbar-icon-fill);
+                    height: 25px !important;
+                    width: 25px !important;
+                    border: none;
+                    flex: none;
 
-                    .closeButton_c2b141 {
-                        border-radius: 50%;
-                        background-color: var(--gnome-button-background);
-                        color: var(--gnome-toolbar-icon-fill);
-                        height: 25px !important;
-                        width: 25px !important;
-                        border: none;
-                        flex: none;
+                    >svg {
+                        margin: 9px 0px 0px 9px;
+                        width: 18px !important;
+                        height: 18px !important;
+                        overflow: visible;
 
-                        >svg {
-                            margin: 9px 0px 0px 9px;
-                            width: 18px !important;
-                            height: 18px !important;
-                            overflow: visible;
-
-                            >path {
-                                margin-left: 20px;
-                                d: path("M0.00380648 0.00268555H1.50315H1.55C1.93069 0.0202563 2.31724 0.19596 2.5808 0.47123L6.00117 3.8916L9.4684 0.47123C9.86666 0.125678 10.1361 0.0143984 10.4992 0.00268555H11.9985V1.50203C11.9985 1.92957 11.9458 2.32784 11.6237 2.62653L8.20333 6.0469L11.5768 9.42042C11.858 9.70155 11.9985 10.0998 11.9985 10.4981V11.9974H10.4992C10.1009 11.9974 9.70267 11.8569 9.42154 11.5757L6.00117 8.15535L2.5808 11.5757C2.29967 11.8569 1.90141 11.9974 1.50315 11.9974H0.00380648V10.4981C0.00380648 10.0998 0.14437 9.70155 0.425496 9.42042L3.84587 6.0469L0.425496 2.62653C0.109228 2.33369 -0.0313351 1.92372 0.00380648 1.50203V0.00268555Z");
-                            }
+                        >path {
+                            margin-left: 20px;
+                            d: path("M0.00380648 0.00268555H1.50315H1.55C1.93069 0.0202563 2.31724 0.19596 2.5808 0.47123L6.00117 3.8916L9.4684 0.47123C9.86666 0.125678 10.1361 0.0143984 10.4992 0.00268555H11.9985V1.50203C11.9985 1.92957 11.9458 2.32784 11.6237 2.62653L8.20333 6.0469L11.5768 9.42042C11.858 9.70155 11.9985 10.0998 11.9985 10.4981V11.9974H10.4992C10.1009 11.9974 9.70267 11.8569 9.42154 11.5757L6.00117 8.15535L2.5808 11.5757C2.29967 11.8569 1.90141 11.9974 1.50315 11.9974H0.00380648V10.4981C0.00380648 10.0998 0.14437 9.70155 0.425496 9.42042L3.84587 6.0469L0.425496 2.62653C0.109228 2.33369 -0.0313351 1.92372 0.00380648 1.50203V0.00268555Z");
                         }
                     }
                 }
             }
         }
+    }
 
-        .contentColumn__23e6b:not([id*="vencord"], [id*="vesktop"]) {
-            /* vencord tabs excluded because they are literally the only ones that break lmfao */
-            min-width: 0px !important;
-            width: 100%;
-            padding: 0px 20px;
+    .contentColumn__23e6b:not([id*="vencord"], [id*="vesktop"]) {
+        /* vencord tabs excluded because they are literally the only ones that break lmfao */
+        min-width: 0px !important;
+        width: 100%;
+        padding: 0px 20px;
 
-            >.settingsPage_f131e9 {
-                >div {
-                    padding-top: 66px;
-                }
-
-                >h3 {
-                    font-size: 16px;
-                    z-index: 5000;
-                    height: 46px;
-                    align-content: center;
-                    text-align: center;
-                    width: calc(60vw - 270px - 50px);
-                    position: fixed;
-                }
+        >.settingsPage_f131e9 {
+            >div {
+                padding-top: 66px;
             }
 
-            >div>h2[data-text-variant="heading-lg/semibold"],
-            >div>.sectionTitle__7bffb>h2,
-            >h2[data-text-variant="heading-lg/semibold"] {
+            >h3 {
                 font-size: 16px;
-                z-index: 100;
+                z-index: 5000;
                 height: 46px;
                 align-content: center;
                 text-align: center;
                 width: calc(60vw - 270px - 50px);
                 position: fixed;
-                pointer-events: none;
-            }
-
-            >div>.children__7bffb,
-            .tabBar_d6f9e9,
-            .vc-settings-tab-bar,
-            .vc-special-card,
-            >div>.h5_b717a1 {
-                margin-top: 66px;
-            }
-
-            .headerContainer__6a750 {
-                justify-content: center;
             }
         }
-    }
 
-    .sidebarRegion__23e6b {
-        flex: none;
+        >div>h2[data-text-variant="heading-lg/semibold"],
+        >div>.sectionTitle__7bffb>h2,
+        >h2[data-text-variant="heading-lg/semibold"] {
+            font-size: 16px;
+            z-index: 100;
+            height: 46px;
+            align-content: center;
+            text-align: center;
+            width: calc(60vw - 270px - 50px);
+            position: fixed;
+            pointer-events: none;
+        }
 
-        .sidebar__23e6b {
-            width: 270px;
-            padding: 0;
-            overflow: visible !important;
+        >div>.children__7bffb,
+        .tabBar_d6f9e9,
+        .vc-settings-tab-bar,
+        .vc-special-card,
+        >div>.h5_b717a1 {
+            margin-top: 66px;
+        }
 
-            &::before {
-                content: "Settings";
-                font-size: 16px;
-                font-weight: 600;
-                z-index: 100;
-                height: 46px;
-                align-content: center;
-                text-align: center;
-                width: 278px;
-                position: fixed;
-                pointer-events: none;
-                background-color: var(--background-secondary);
-                box-shadow: var(--elevation-low);
-                color: white;
-            }
-
-            .side_b3f026 {
-                overflow: visible !important;
-                padding: 60px 8px 60px 16px;
-            }
-            
+        .headerContainer__6a750 {
+            justify-content: center;
         }
     }
-
 }
+
+.sidebarRegion__23e6b {
+    flex: none;
+
+    .sidebar__23e6b {
+        width: 270px;
+        padding: 0;
+        overflow: visible !important;
+
+        &::before {
+            content: "Settings";
+            font-size: 16px;
+            font-weight: 600;
+            z-index: 100;
+            height: 46px;
+            align-content: center;
+            text-align: center;
+            width: 278px;
+            position: fixed;
+            pointer-events: none;
+            background-color: var(--background-secondary);
+            box-shadow: var(--elevation-low);
+            color: white;
+        }
+
+        .side_b3f026 {
+            overflow: visible !important;
+            padding: 60px 8px 60px 16px;
+        }
+
+    }
+}
+
 
 .layer__960e4 {
     background-color: var(--gnome-card-shade-color) !important;
@@ -775,10 +794,9 @@
     padding: 8px 16px 8px 8px;
     display: flex;
     flex-direction: column-reverse;
-    align-items: center;
     box-shadow: 0 -1px 0 hsl(0 calc(1*0%) 0.784% /0.2), 0 -1.5px 0 hsl(240 calc(1*7.692%) 2.549% /0.05), 0 -2px 0 hsl(0 calc(1*0%) 0.784% /0.05);
     background-color: var(--background-primary);
-
+align-items: center;
     .typing_b88801 {
         position: relative;
         width: 100%;
@@ -974,54 +992,53 @@
     height: 24px;
 }
 
+
 /* MESSAGES ----------------------------------------------------------------- */
 .messagesWrapper__36d07>.scroller__36d07>.scrollerContent__36d07,
 .form_f75fb0 .channelBottomBarArea_f75fb0 {
-    width: 100%;
+    width: 100% !important;
     max-width: var(--gord-chat-width);
     justify-self: center;
 }
 
-.message__5126c {
-    .header_c19a55 {
-        display: flex;
-        justify-content: space-between;
+.header_c19a55 {
+    display: flex;
+    justify-content: space-between;
 
-        .username_c19a55 {
-            font-weight: 700;
-        }
+    .username_c19a55 {
+        font-weight: 700;
     }
+}
 
-    .buttons__5126c {
-        display: var(--gord-message-actions);
-    }
+.buttons__5126c {
+    display: var(--gord-message-actions);
+}
 
-    &.mentioned__5126c {
-        background-color: var(--gnome-selection-bg);
-        border-radius: var(--gnome-button-radius);
+&.mentioned__5126c {
+    background-color: var(--gnome-selection-bg);
+    border-radius: var(--gnome-button-radius);
 
-        &::before {
-            display: none;
-        }
-
-        &:hover {
-            background-color: var(--gnome-selection-bg) !important;
-        }
+    &::before {
+        display: none;
     }
 
     &:hover {
-        background-color: transparent !important;
+        background-color: var(--gnome-selection-bg) !important;
     }
+}
 
-    .timestampVisibleOnHover_c19a55 {
-        position: absolute !important;
-        right: 20px !important;
-        text-align: left !important;
-        left: auto !important;
+&:hover {
+    background-color: transparent !important;
+}
 
-        time {
-            font-size: 0.75rem !important;
-        }
+.timestampVisibleOnHover_c19a55 {
+    position: absolute !important;
+    right: 20px !important;
+    text-align: left !important;
+    left: auto !important;
+
+    time {
+        font-size: 0.75rem !important;
     }
 }
 
@@ -1066,16 +1083,17 @@
     width: fit-content;
 
     /* background-color: var(--gnome-card-shade-color); */
-    .barButtonMain__0f481 {
-        flex: none;
-    }
+}
 
-    .barButtonAlt__0f481 {
-        font-size: 0;
+.barButtonMain__0f481 {
+    flex: none;
+}
 
-        .barButtonIcon__0f481 {
-            margin: 0;
-        }
+.barButtonAlt__0f481 {
+    font-size: 0;
+
+    .barButtonIcon__0f481 {
+        margin: 0;
     }
 }
 
@@ -1224,52 +1242,10 @@
 
 }
 
-.visual-refresh {
-    div[class^="subtitleContainer_"],
-    main.container__133bf {
-        & > section.container__9293f {
-            padding-right: 86px;
-        }
-    }
+/* SERVERLIST  -------------------------------------------------- */
 
-    div.page_c48ade {
-        &:not(:has(> div.chat_f75fb0)) {
-            anchor-name: --vr-header-snippet;
-        }
-
-        & > div.chat_f75fb0 {
-            anchor-name: --vr-header-snippet;
-        }
-    }
-
-    div.base_c48ade {
-        grid-template-rows: [top] 0 [titleBarEnd] min-content [noticeEnd] 1fr [end];
-
-        & > div[class^="bar_"] {
-            position: absolute;
-            position-anchor: --vr-header-snippet;
-            top: var(--vr-header-snippet-top);
-            right: anchor(right);
-            width: anchor-size(width);
-            padding: 0;
-        }
-
-        & div.trailing_c38106 {
-            background: none;
-            border: none;
-            height: var(--custom-channel-header-height);
-        }
-
-        & > div.content_c48ade {
-            z-index: 0;
-        }
-    }
-
-    :not(:has(div.page_c48ade > div.chat_f75fb0)) div.base_c48ade > div.bar_c38106 {
-        right: 0 !important;
-    }
-
-    ul[data-list-id="guildsnav"] > div.itemsContainer_ef3116 > div.stack_dbd263 {
-        margin-top: 16px;
-    }
+.guilds_c48ade {
+    margin-top: 12px;
+    margin-bottom: 0px!important;
 }
+
