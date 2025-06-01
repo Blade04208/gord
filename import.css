@@ -796,7 +796,7 @@
     flex-direction: column-reverse;
     box-shadow: 0 -1px 0 hsl(0 calc(1*0%) 0.784% /0.2), 0 -1.5px 0 hsl(240 calc(1*7.692%) 2.549% /0.05), 0 -2px 0 hsl(0 calc(1*0%) 0.784% /0.05);
     background-color: var(--background-primary);
-align-items: center;
+/* align-items: center; */
     .typing_b88801 {
         position: relative;
         width: 100%;
