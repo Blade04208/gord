@@ -784,7 +784,6 @@
     padding: 8px 16px 8px 8px;
     display: flex;
     flex-direction: column-reverse;
-    align-items: center;
     box-shadow: 0 -1px 0 hsl(0 calc(1*0%) 0.784% /0.2), 0 -1.5px 0 hsl(240 calc(1*7.692%) 2.549% /0.05), 0 -2px 0 hsl(0 calc(1*0%) 0.784% /0.05);
     background-color: var(--background-primary);
 
@@ -992,7 +991,6 @@
     justify-self: center;
 }
 
-.message__5126c {
     .header_c19a55 {
         display: flex;
         justify-content: space-between;
@@ -1033,7 +1031,6 @@
             font-size: 0.75rem !important;
         }
     }
-}
 
 .jumpToPresentBar__0f481 {
     bottom: 16px !important;
@@ -1076,6 +1073,7 @@
     width: fit-content;
 
     /* background-color: var(--gnome-card-shade-color); */
+}
     .barButtonMain__0f481 {
         flex: none;
     }
@@ -1087,7 +1085,6 @@
             margin: 0;
         }
     }
-}
 
 /* CONTEXT MENUS -------------- */
 .menu_c1e9c4 {
