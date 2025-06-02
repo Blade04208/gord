@@ -6,12 +6,13 @@
     --gord-message-actions: none;
 }
 
-:root,
+.visual-refresh {
 .recentMentionsPopout__95796,
-.layer_da8173 {
+.layer_da8173, .sidebar_c48ade, .guilds_c48ade, .theme-dark, .theme-darker, .chatContent_f75fb0, .contentRegion__23e6b {
     --background-primary: var(--gnome-view-background) !important;
     --background-base-lowest: var(--gnome-view-background) !important;
     --background-base-lower: var(--gnome-view-background) !important;
+    --background-base-low: var(--gnome-window-background) !important;
     --__header-bar-background: var(--gnome-view-background) !important;
     --background-secondary: var(--gnome-secondary-sidebar-background);
     --bg-base-secondary: var(--gnome-view-background) !important;
@@ -28,11 +29,17 @@
     --modal-background: var(--gnome-window-background);
     --home-background: var(--gnome-view-background);
     --bg-base-primary: var(--gnome-view-background);
-    --font-primary: system-ui;
     --chat-background-default: var(--gnome-view-background) !important;
     --border-subtle: transparent !important;
 }
+}
 
+* {
+        --font-primary: system-ui!important;
+}
+.toolsContainer__23e6b {
+    background: var(--gnome-window-background)!important;
+}
 /* fuck visual refresh */
 .privateChannels__35e86,
 .scroller__99e7c,
@@ -578,8 +585,8 @@
 /* SETTINGS ------------------------------- -------------- -- - - - */
 .standardSidebarView__23e6b {
     position: absolute;
-    width: 60vw;
-    max-width: 60vw !important;
+    width: 100vw;
+    max-width: 1000px !important;
     height: 75vh;
     z-index: 4000;
     justify-self: center;
@@ -591,7 +598,7 @@
 }
 
 .contentRegion__23e6b {
-    width: calc(60vw - 270px);
+    width:calc(100% - 270px);
     display: block;
     flex: none;
 
@@ -660,7 +667,8 @@
                 height: 46px;
                 align-content: center;
                 text-align: center;
-                width: calc(60vw - 270px - 50px);
+                width: calc(100vw - 270px - 50px);
+                max-width: calc(1000px - 270px - 50px);
                 position: fixed;
             }
         }
@@ -673,7 +681,8 @@
             height: 46px;
             align-content: center;
             text-align: center;
-            width: calc(60vw - 270px - 50px);
+            width: calc(100vw - 270px - 50px);
+                max-width: calc(1000px - 270px - 50px);
             position: fixed;
             pointer-events: none;
         }
