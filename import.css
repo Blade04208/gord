@@ -1,10 +1,116 @@
 @import url(./src/colorvars.css);
-@import url(./src/accent/blue.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Google.css);
 
 :root {
     --gord-chat-width: 1000px;
     --gord-message-actions: none;
+    --gord-accent: gnome-blue;
 }
+
+@property --gord-accent {
+    syntax: "<color> | gnome-blue | gnome-green | gnome-orange | gnome-purple | gnome-red | gnome-yellow";
+    initial-value: gnome-blue;
+}
+
+:root {
+    --brand-100: color-mix(in oklab, var(--gord-accent), white 40%);
+    --brand-300: color-mix(in oklab, var(--gord-accent), white 20%);
+    --brand-500: var(--gord-accent);
+    --brand-700: color-mix(in oklab, var(--gord-accent), black 20%);
+    --brand-1000: color-mix(in oklab, var(--gord-accent), black 40%);
+}
+
+@container style(--gord-accent: gnome-blue) {
+    #app-mount {
+        --brand-100: var(--gnome-palette-blue-1);
+        --brand-300: var(--gnome-palette-blue-2);
+        --brand-500: var(--gnome-palette-blue-3);
+        --brand-700: var(--gnome-palette-blue-4);
+        --brand-1000: var(--gnome-palette-blue-5);
+    }
+}
+
+@container style(--gord-accent: gnome-green) {
+    #app-mount {
+        --brand-100: var(--gnome-palette-green-1);
+        --brand-300: var(--gnome-palette-green-2);
+        --brand-500: var(--gnome-palette-green-3);
+        --brand-700: var(--gnome-palette-green-4);
+        --brand-1000: var(--gnome-palette-green-5);
+    }
+}
+
+@container style(--gord-accent: gnome-orange) {
+    #app-mount {
+        --brand-100: var(--gnome-palette-orange-1);
+        --brand-300: var(--gnome-palette-orange-2);
+        --brand-500: var(--gnome-palette-orange-3);
+        --brand-700: var(--gnome-palette-orange-4);
+        --brand-1000: var(--gnome-palette-orange-5);
+    }
+}
+
+@container style(--gord-accent: gnome-purple) {
+    #app-mount {
+        --brand-100: var(--gnome-palette-purple-1);
+        --brand-300: var(--gnome-palette-purple-2);
+        --brand-500: var(--gnome-palette-purple-3);
+        --brand-700: var(--gnome-palette-purple-4);
+        --brand-1000: var(--gnome-palette-purple-5);
+    }
+}
+
+@container style(--gord-accent: gnome-red) {
+    #app-mount {
+        --brand-100: var(--gnome-palette-red-1);
+        --brand-300: var(--gnome-palette-red-2);
+        --brand-500: var(--gnome-palette-red-3);
+        --brand-700: var(--gnome-palette-red-4);
+        --brand-1000: var(--gnome-palette-red-5);
+    }
+}
+
+@container style(--gord-accent: gnome-yellow) {
+    #app-mount {
+        --brand-100: var(--gnome-palette-yellow-1);
+        --brand-300: var(--gnome-palette-yellow-2);
+        --brand-500: var(--gnome-palette-yellow-3);
+        --brand-700: var(--gnome-palette-yellow-4);
+        --brand-1000: var(--gnome-palette-yellow-5);
+    }
+}
+
+#app-mount {
+    --brand-200: var(--brand-100);
+    --brand-260: var(--brand-100);
+    --brand-360: var(--brand-300);
+    --brand-400: var(--brand-300);
+    --brand-460: var(--brand-500);
+    --brand-530: var(--brand-500);
+    --brand-560: var(--brand-1000);
+    --brand-600: var(--brand-500);
+    --brand-800: var(--brand-700);
+    --brand-900: var(--brand-1000);
+    --control-brand-foreground-new: var(--brand-300);
+    --gnome-accent-bg: var(--brand-500);
+    --blurple-50: var(--brand-500);
+    --text-brand: var(--brand-300);
+    --checkbox-background-checked: var(--brand-500) !important;
+    --checkbox-border-checked: var(--brand-500) !important;
+    --bg-brand: var(--brand-500) !important;
+    --button-filled-brand-background-hover: var(--brand-700) !important;
+    --background-message-highlight: color-mix(in srgb, var(--brand-500), transparent 80%)!important;
+}
+
+.container__87bf1.checked__87bf1 {
+    background-color: var(--brand-500)!important;
+}
+
+/* .visual-refresh .theme-dark,
+.visual-refresh .theme-light {
+    --bg-brand: var(--brand-500) !important;
+} */
+
 
 .visual-refresh {
 
@@ -61,7 +167,9 @@
     background-color: var(--gnome-sidebar-background) !important;
 }
 
-.tabBody__133bf, .peopleColumn__133bf, .container__7d20c {
+.tabBody__133bf,
+.peopleColumn__133bf,
+.container__7d20c {
     background: var(--gnome-view-background);
 }
 

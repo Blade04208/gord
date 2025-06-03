@@ -1,9 +1,19 @@
 /* DEV VERSION FOR TESTING */
 
 @import url(./import.css);
-@import url(./src/accent/blue.css);
 
 :root {
   --gord-chat-width: 1000px;       /* The width of the chat on larger than [blank] windows. set to "none" to disable.                                        */
   --gord-message-actions: none;    /* This removes the quick message actions on a message. Set to "block" to disable this and get your message actions back. */
+  --gord-accent: #6ce000;
+}
+
+
+div[id="design_systems_colors-tab"]::before {
+  content: "";
+  display: block;
+  position: relative;
+  height: 48px;
+  width: 100%;
+  background: var(--brand-300);
 }
