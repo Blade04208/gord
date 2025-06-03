@@ -3,17 +3,13 @@
  * @description Libadwatia/GNOME styling in discord.
  * @author Blade0
  * @authorId 1124341362955919371
- * @version 3.0
+ * @version 3.1
  * @updateUrl https://blade04208.github.io/gord/gord.theme.css
  * @source https://github.com/Blade04208/gord
  * @invite KEcCnVuTV7
  */
  
 @import url(https://blade04208.github.io/gord/import.css);
-
-
-@import url(https://blade04208.github.io/gord/src/accent/blue.css);
-/* This import handles the accent color, and is based on the accents used in standard Gnome 47+,so set this to the name of your accent as listed in gnome-control-center and it should work */
 
 :root {
     --gord-chat-width: 1000px;       /* The width of the chat on larger than [blank] windows. set to "none" to disable.                                        */
