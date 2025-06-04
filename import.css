@@ -1374,6 +1374,12 @@ div[class*="threadSidebarOpen_"]>div>section>div[class^="upperContainer_"] {
 
 }
 
+/* UNCENTERED AND UNCLICKABLE GROUP NAME FIX */
+.hoverableContainer__754bd{
+    align-self: center;
+    -webkit-app-region: no-drag;
+}
+
 /* SERVERLIST  -------------------------------------------------- */
 
 .guilds_c48ade {
