@@ -1380,3 +1380,19 @@ div[class*="threadSidebarOpen_"]>div>section>div[class^="upperContainer_"] {
     margin-top: 12px;
     margin-bottom: 0px !important;
 }
+
+/* CLICKABILITY ISSUES */
+
+.toolbar__9293f,
+.container__49508,
+.hoverableContainer__754bd,
+.titleWrapper__9293f,
+.iconWrapper__9293f{
+    -webkit-app-region: no-drag;
+}
+
+/* UNCENTERED GROUP TITLE */
+
+.hoverableContainer__754bd{
+    align-self: center;
+}
