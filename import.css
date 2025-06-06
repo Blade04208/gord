@@ -1396,3 +1396,12 @@ div[class*="threadSidebarOpen_"]>div>section>div[class^="upperContainer_"] {
 .hoverableContainer__754bd{
     align-self: center;
 }
+
+/* FULL VC CHAT TITLE */
+.container__9293f{
+    padding-left: 8px !important;
+    width: 100%;
+} 
+.container__01ae2 .upperContainer__9293f{
+    width: 100% !important;
+}
