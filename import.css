@@ -220,6 +220,7 @@
     margin: 0px;
     gap: 4px;
     -webkit-app-region: no-drag!important;
+    z-index: 2000;
 }
 
 .trailing_c38106 {
