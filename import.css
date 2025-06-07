@@ -867,58 +867,152 @@ div[class*="threadSidebarOpen_"]>div>section>div[class^="upperContainer_"] {
 
 /* PROFILES ------------------------------------------ */
 
-/* .fullSize_c0bea0 {
-    .mask__68edb foreignObject {
-        mask: none;
+
+.user-profile-modal-v2 {
+  width: auto;
+  max-width: 90vw;
+
+  .inner_c0bea0 {
+    padding: 0px !important;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: auto !important;
+    gap: 0px;
+
+    .container__37bfc {
+      height: auto !important;
+      overflow: visible !important;
+
+      .scroller__37bfc {
+        overflow: visible !important;
+      }
     }
+  }
 
-    .headerInner__24502 {
-        .avatar__75742 {
-            align-self: center;
-            justify-self: center;
-            top: -150px;
-            left: 50%;
-            right: 50%;
+  .profileScroller__9c3be {
+    overflow: visible !important;
+  }
+
+  .avatar__75742 {
+    justify-self: center !important;
+    align-self: center;
+    left: calc(25% * 1.5);
+    top: calc(58px * 1.25);
+    scale: 1.1;
+  }
+
+  .container__63ed3>.usernameRow__63ed3,
+  .container__63ed3>.tags__63ed3 {
+    align-content: center;
+    justify-content: center;
+
+    .nickname__63ed3 {
+      font-family: system-ui !important;
+      font-size: 28px;
+      font-weight: 800;
+    }
+  }
+
+  .profileButtons__9c3be {
+    --custom-button-button-sm-height: 44px !important;
+
+    .primary_fb7f94 {
+      width: 100%;
+    }
+  }
+
+  .mask__68edb >foreignObject {
+    mask: none;
+  }
+
+  .container_ab8609 {
+    top: 20px!important;
+        left: calc(25% * 1.5 - 28px)!important;
+        .outer_ab8609 {
+          &::before {
+            top: unset;
+            bottom: -8px;
+          }
+          &::after {
+                        top: unset;
+            bottom: -23px;
+            left: 20px!important;
+          }
         }
+  }
+}
 
-        .referenceContainer_ab8609 {
+.root__49fc1:has(.user-profile-modal-v2),
+.user-profile-modal-v2 .inner_c0bea0,
+.user-profile-modal-v2 .container__37bfc,
+.user-profile-modal-v2 .profile__9c3be {
+  max-width: 90vw !important;
+  width: 500px;
+}
+
+
+.section_bf424d:has(.memberSinceWrapper_c4eb81),
+.section_bf424d:has(> div[class="defaultColor__4bd52 text-sm/normal_cf4812"]) {
+  /* height: 56px!important; */
+  padding: 16px;
+  border-radius: var(--gnome-card-radius);
+  /* justify-content: center; */
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--gnome-card-background);
+  border: 1px solid var(--gnome-card-shade-color);
+
+  .headings_bf424d {
+    align-content: center !important;
+
+    h2[data-text-variant="text-xs/medium"] {
+      font-size: 14px !important;
+    }
+  }
+}
+
+
+.section_bf424d:has(.connection__9bfb9) {
+  .container__9bfb9 {
+    background-color: var(--gnome-card-background);
+    border: 1px solid var(--gnome-card-shade-color);
+    border-radius: var(--gnome-card-radius);
+    gap: 0px;
+    .connection__9bfb9 {
+      padding: 16px;
+      max-height: 24px;
+      border-bottom: 1px solid var(--gnome-card-shade-color);
+
+      .connectionInfo__9bfb9 {
+        width: 100%;
+        justify-content: space-between !important;
+        flex-direction: row;
+
+        >div:not(.metadata__9bfb9) {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+
+          >[data-text-variant="text-xs/normal"] {
             display: none;
-        }
+          }
 
-        .container_ab8609 {
-            top: -20px;
+          .platformUrlAnchor__9bfb9,
+          .accountNameText__9bfb9 {
             align-self: center;
             justify-self: center;
-            left: 34%;
-
-            .outer_ab8609 {
-                max-width: none;
-                width: 50% !important;
-
-                &::before {
-                    left: 160px;
-                }
-
-                &::after {
-                    top: -24px;
-                    left: 155px;
-                }
-            }
+          }
         }
-
-        .headerButtons__24502 {
-            padding-top: 40px;
-
-            .multipleButtons_ea99c4 {
-                width: 100%;
-
-                .button_fb7f94 {
-                    width: 100%;
-                }
-            }
-        }
+      }
     }
-} */
+  }
+}
+
+    .headings_bf424d>.header_bf424d>h2 {
+      font-size: 14px !important;
+      font-weight: 600;
+    }
+
 
 /* textarea ------------ ---------- - - - - --- --- - - --  - - -  */
 .form_f75fb0 {
