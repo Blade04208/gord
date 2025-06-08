@@ -67,7 +67,7 @@
     --gnome-palette-dark-5: #000000;
 
     /* Colors */
-    --gnome-accent-bg: AccentColor;
+    --gnome-accent-bg: var(--gord-accent);
     --gnome-accent: oklab(from var(--gnome-accent-bg) var(--gnome-standalone-color-oklab));
     --gnome-destructive: oklab(from var(--gnome-destructive-bg) var(--gnome-standalone-color-oklab));
     --gnome-success: oklab(from var(--gnome-success-bg) var(--gnome-standalone-color-oklab));
