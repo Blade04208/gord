@@ -22,61 +22,61 @@
 
 @container style(--gord-accent: gnome-blue) {
     #app-mount {
-        --brand-100: var(--gnome-palette-blue-1);
-        --brand-300: var(--gnome-palette-blue-2);
-        --brand-500: var(--gnome-palette-blue-3);
-        --brand-700: var(--gnome-palette-blue-4);
-        --brand-1000: var(--gnome-palette-blue-5);
+        --brand-100: var(--gnome-palette-blue-1)!important;
+        --brand-300: var(--gnome-palette-blue-2)!important;
+        --brand-500: var(--gnome-palette-blue-3)!important;
+        --brand-700: var(--gnome-palette-blue-4)!important;
+        --brand-1000: var(--gnome-palette-blue-5)!important;
     }
 }
 
 @container style(--gord-accent: gnome-green) {
     #app-mount {
-        --brand-100: var(--gnome-palette-green-1);
-        --brand-300: var(--gnome-palette-green-2);
-        --brand-500: var(--gnome-palette-green-3);
-        --brand-700: var(--gnome-palette-green-4);
-        --brand-1000: var(--gnome-palette-green-5);
+        --brand-100: var(--gnome-palette-green-1)!important;
+        --brand-300: var(--gnome-palette-green-2)!important;
+        --brand-500: var(--gnome-palette-green-3)!important;
+        --brand-700: var(--gnome-palette-green-4)!important;
+        --brand-1000: var(--gnome-palette-green-5)!important;
     }
 }
 
 @container style(--gord-accent: gnome-orange) {
     #app-mount {
-        --brand-100: var(--gnome-palette-orange-1);
-        --brand-300: var(--gnome-palette-orange-2);
-        --brand-500: var(--gnome-palette-orange-3);
-        --brand-700: var(--gnome-palette-orange-4);
-        --brand-1000: var(--gnome-palette-orange-5);
+        --brand-100: var(--gnome-palette-orange-1)!important;
+        --brand-300: var(--gnome-palette-orange-2)!important;
+        --brand-500: var(--gnome-palette-orange-3)!important;
+        --brand-700: var(--gnome-palette-orange-4)!important;
+        --brand-1000: var(--gnome-palette-orange-5)!important;
     }
 }
 
 @container style(--gord-accent: gnome-purple) {
     #app-mount {
-        --brand-100: var(--gnome-palette-purple-1);
-        --brand-300: var(--gnome-palette-purple-2);
-        --brand-500: var(--gnome-palette-purple-3);
-        --brand-700: var(--gnome-palette-purple-4);
-        --brand-1000: var(--gnome-palette-purple-5);
+        --brand-100: var(--gnome-palette-purple-1)!important;
+        --brand-300: var(--gnome-palette-purple-2)!important;
+        --brand-500: var(--gnome-palette-purple-3)!important;
+        --brand-700: var(--gnome-palette-purple-4)!important;
+        --brand-1000: var(--gnome-palette-purple-5)!important;
     }
 }
 
 @container style(--gord-accent: gnome-red) {
     #app-mount {
-        --brand-100: var(--gnome-palette-red-1);
-        --brand-300: var(--gnome-palette-red-2);
-        --brand-500: var(--gnome-palette-red-3);
-        --brand-700: var(--gnome-palette-red-4);
-        --brand-1000: var(--gnome-palette-red-5);
+        --brand-100: var(--gnome-palette-red-1)!important;
+        --brand-300: var(--gnome-palette-red-2)!important;
+        --brand-500: var(--gnome-palette-red-3)!important;
+        --brand-700: var(--gnome-palette-red-4)!important;
+        --brand-1000: var(--gnome-palette-red-5)!important;
     }
 }
 
 @container style(--gord-accent: gnome-yellow) {
     #app-mount {
-        --brand-100: var(--gnome-palette-yellow-1);
-        --brand-300: var(--gnome-palette-yellow-2);
-        --brand-500: var(--gnome-palette-yellow-3);
-        --brand-700: var(--gnome-palette-yellow-4);
-        --brand-1000: var(--gnome-palette-yellow-5);
+        --brand-100: var(--gnome-palette-yellow-1)!important;
+        --brand-300: var(--gnome-palette-yellow-2)!important;
+        --brand-500: var(--gnome-palette-yellow-3)!important;
+        --brand-700: var(--gnome-palette-yellow-4)!important;
+        --brand-1000: var(--gnome-palette-yellow-5)!important;
     }
 }
 
@@ -101,6 +101,8 @@
     --button-filled-brand-background: var(--brand-500) !important;
     --button-filled-brand-background-hover: var(--brand-700) !important;
     --background-message-highlight: color-mix(in srgb, var(--brand-500), transparent 80%) !important;
+    --redesign-input-control-selected: var(--brand-500) !important;
+    --gnome-entry-focused-border-color: color-mix(in srgb, var(--brand-500) 50%, transparent);
 }
 
 .container__87bf1.checked__87bf1 {
@@ -111,7 +113,9 @@
 .visual-refresh .theme-light {
     --bg-brand: var(--brand-500) !important;
 } */
-
+[class^="scroller_"] {
+    will-change: scroll-position !important;
+}
 
 .visual-refresh {
 
@@ -122,7 +126,7 @@
     .theme-dark,
     .theme-darker,
     .chatContent_f75fb0,
-    .contentRegion__23e6b {
+    .contentRegion__23e6b, .chat_f75fb0 {
         --background-primary: var(--gnome-view-background) !important;
         --background-base-lowest: var(--gnome-view-background) !important;
         --background-base-lower: var(--gnome-view-background) !important;
@@ -148,7 +152,7 @@
     }
 }
 
-* {
+html {
     --font-primary: system-ui !important;
     --font-display: system-ui !important;
 }
@@ -593,14 +597,14 @@ div[class*="threadSidebarOpen_"]>div>section>div[class^="upperContainer_"] {
         min-height: 34px;
         padding: 0px;
         overflow: visible;
-        background-color: transparent;
+        background-color: transparent !important;
         background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1618_9)'%3E%3Cpath d='M15.6055 9.05859C12.0273 9.05859 9.10547 11.9805 9.10547 15.5586C9.10547 19.1367 12.0273 22.0547 15.6055 22.0547C17.0352 22.0547 18.3594 21.5898 19.4336 20.8008L22.4062 23.7734C23.3633 24.7148 24.7695 23.2773 23.8125 22.3359L20.8555 19.3789C21.6367 18.3047 22.1055 16.9844 22.1055 15.5586C22.1055 11.9805 19.1797 9.05859 15.6055 9.05859ZM15.6055 11.0586C18.1016 11.0586 20.1055 13.0625 20.1055 15.5586C20.1055 18.0547 18.1016 20.0547 15.6055 20.0547C13.1055 20.0547 11.1055 18.0547 11.1055 15.5586C11.1055 13.0625 13.1055 11.0586 15.6055 11.0586Z' fill='white' style='fill:white;fill-opacity:1;'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1618_9'%3E%3Crect width='16' height='16' fill='white' style='fill:white;fill-opacity:1;' transform='translate(9 9)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
         border-radius: var(--gnome-button-radius);
         transition: background-color 0.2s;
         box-sizing: content-box;
 
         &:hover {
-            background-color: var(--gnome-button-hover-background);
+            background-color: var(--gnome-button-hover-background) !important;
         }
 
         .contents__201d5 {
@@ -624,13 +628,47 @@ div[class*="threadSidebarOpen_"]>div>section>div[class^="upperContainer_"] {
 }
 
 /* Notices -------------------------------------------*/
-/* .notice__6e2b9 {
-    .closeButton__6e2b9 {
-        top: 5px;
-        left: 59px;
+.notice__6e2b9 {
+    position: fixed;
+    right: 0px;
+    top: 68px;
+    width: calc(100vw - var(--custom-guild-sidebar-width)) !important;
+    height: 46px !important;
+    padding: 0px 6px !important;
+    box-sizing: border-box !important;
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap !important;
+    border-radius: 0px;
+
+    .defaultColor__4bd52 {
+        width: 100% !important;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        align-content: center;
     }
 
-} */
+    .closeButton__6e2b9 {
+        position: relative;
+    }
+
+    >* {
+        height: 100%;
+    }
+
+    svg {
+        top: 0px !important;
+    }
+
+    button {
+        height: var(--gnome-button-size);
+        border-radius: var(--gnome-button-radius);
+        white-space: nowrap;
+        justify-self: right;
+    }
+}
+
 
 
 /* BUTON STYLING/swtich styling -----------------------*/
@@ -640,6 +678,10 @@ div[class*="threadSidebarOpen_"]>div>section>div[class^="upperContainer_"] {
 
 .button__201d5 {
     border-radius: var(--gnome-button-radius);
+}
+
+:root {
+    --c: var(--interactive-normal)
 }
 
 .lookOutlined__201d5,
@@ -654,7 +696,11 @@ div[class*="threadSidebarOpen_"]>div>section>div[class^="upperContainer_"] {
     }
 }
 
-button:not(.lookOutlined__201d5, .lookFilled__201d5).lowSaturationUnderline__41f68.sizeMedium__201d5, .refreshVoiceChannelsButton__29444, button.colorPrimary__201d5, button.colorWhite__201d5 {
+button:not(.lookOutlined__201d5, .lookFilled__201d5, .lookLink__201d5).lowSaturationUnderline__41f68.sizeMedium__201d5,
+.refreshVoiceChannelsButton__29444,
+button.colorPrimary__201d5,
+button.colorWhite__201d5,
+.upsellButtonsContainer__675aa button.colorBrandInverted__201d5 {
     background-color: var(--gnome-button-background) !important;
 
     .contents__201d5 {
@@ -662,10 +708,15 @@ button:not(.lookOutlined__201d5, .lookFilled__201d5).lowSaturationUnderline__41f
     }
 }
 
-button:not(.lookOutlined__201d5, .lookFilled__201d5).sizeMedium__201d5:hover, .refreshVoiceChannelsButton__29444:hover, button.colorPrimary__201d5:hover, button.colorWhite__201d5:hover {
+button:not(.lookOutlined__201d5, .lookFilled__201d5, .lookLink__201d5).sizeMedium__201d5:hover,
+.refreshVoiceChannelsButton__29444:hover,
+button.colorPrimary__201d5:hover,
+button.colorWhite__201d5:hover,
+.upsellButtonsContainer__675aa button.button__201d5:hover {
     background-color: var(--gnome-button-hover-background) !important;
+
     .contents__201d5 {
-    --button--underline-color: transparent!important;
+        --button--underline-color: transparent !important;
     }
 }
 
@@ -688,7 +739,7 @@ button:not(.lookOutlined__201d5, .lookFilled__201d5).sizeMedium__201d5:hover, .r
 }
 
 .boostButton__25ea7 {
-        --bg: color-mix(in srgb, var(--gnome-palette-purple-2) 15%, transparent);
+    --bg: color-mix(in srgb, var(--gnome-palette-purple-2) 15%, transparent);
     --c: var(--gnome-palette-purple-2);
     --h: color-mix(in srgb, var(--gnome-palette-purple-2) 20%, transparent);
 }
@@ -734,10 +785,48 @@ button:not(.lookOutlined__201d5, .lookFilled__201d5).sizeMedium__201d5:hover, .r
     border: none;
 }
 
-.optionButtonWrapper__270d7.selected__270d7, .reaction__23977.reactionMe__23977 {
-background: var(--gnome-selection-bg)!important;
+.optionButtonWrapper__270d7.selected__270d7,
+.reaction__23977.reactionMe__23977 {
+    background: var(--gnome-selection-bg) !important;
 }
 
+.tabBar__6fdb8,
+.tabBar_f8303a,
+.tabBar_d6f9e9, .vc-settings-tab-bar {
+    justify-content: space-evenly;
+    overflow: hidden !important;
+    gap: var(--gnome-toolbar-spacing);
+    border: 0px!important;
+max-width: 100%!important;
+    .item_b3f026,
+    .tab_f8303a {
+        flex-wrap: wrap!important;
+        border-radius: var(--gnome-button-radius);
+        flex: 1 !important;
+        display: block;
+        align-content: center!important;
+        justify-self: center!important;
+        align-items: center!important;
+        justify-items: center!important;
+        text-align: center !important;
+        color: var(--interactive-normal) !important;
+        height: var(--gnome-button-size) !important;
+        padding-bottom: 0px !important;
+        margin: 0px !important;
+
+        &.selected_b3f026 {
+            background-color: var(--gnome-button-background);
+        }
+
+        &:hover {
+            background-color: var(--gnome-button-hover-background);
+        }
+
+        &::after {
+            display: none !important;
+        }
+    }
+}
 
 /* SETTINGS ------------------------------- -------------- -- - - - */
 .standardSidebarView__23e6b {
@@ -801,8 +890,7 @@ background: var(--gnome-selection-bg)!important;
     .tabBar_d6f9e9,
     .vc-settings-tab-bar,
     .vc-special-card,
-    >div>.h5_b717a1,
-    .tabBar_f8303a {
+    >div>.h5_b717a1 {
         margin-top: 66px;
     }
 
@@ -1445,6 +1533,11 @@ background: var(--gnome-selection-bg)!important;
         width: 34px;
         height: 34px;
         border-radius: 50%;
+        background-color: transparent !important;
+
+        &:hover {
+            background-color: var(--gnome-button-background) !important;
+        }
     }
 }
 
@@ -1481,7 +1574,7 @@ background: var(--gnome-selection-bg)!important;
     background: var(--gnome-menu-background);
     border-radius: 10px;
 
-    .item_c1e9c4:not(.checkboxContainer_c1e9c4) .iconContainer_c1e9c4 .icon_c1e9c4 {
+    .item_c1e9c4:not(.checkboxContainer_c1e9c4, [id^="message-add-reaction-"]) .iconContainer_c1e9c4 .icon_c1e9c4 {
         display: none;
     }
 
@@ -1689,4 +1782,28 @@ background: var(--gnome-selection-bg)!important;
             }
         }
     }
+}
+
+
+.info__2debe::after {
+    width: 100%;
+    display: block;
+    border-top: 1px solid var(--gnome-card-background);
+    padding-top: 8px;
+    margin-top: 8px;
+    content: "Gord \A Version 3 (48) \A Made by Blade0 \A ✨enjoy✨";
+    text-transform: none;
+    font-family: var(--font-primary);
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--text-muted);
+    white-space: pre;
+}
+
+
+.members_c8ffbb, .container_c8ffbb, .member__5d473 {
+    background: transparent!important;
+    border: none!important;
+    --custom-channel-members-bg: transparent!important;
 }
