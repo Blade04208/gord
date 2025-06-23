@@ -8,7 +8,7 @@
 }
 
 @property --gord-accent {
-    syntax: "<color> | gnome-blue | gnome-green | gnome-orange | gnome-purple | gnome-red | gnome-yellow";
+    syntax: "<color> | gnome-teal | gnome-blue | gnome-green | gnome-orange | gnome-purple | gnome-red | gnome-yellow";
     initial-value: gnome-blue;
 }
 
