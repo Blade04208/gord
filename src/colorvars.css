@@ -65,7 +65,12 @@
     --gnome-palette-dark-3: #3d3846;
     --gnome-palette-dark-4: #241f31;
     --gnome-palette-dark-5: #000000;
-
+    --gnome-palette-teal-1: #6bc3d3;
+    --gnome-palette-teal-2: #42a0b1;
+    --gnome-palette-teal-3: #2190a4;
+    --gnome-palette-teal-4: #157c8f;
+    --gnome-palette-teal-5: #015e6e;
+    
     /* Colors */
     --gnome-accent-bg: var(--gord-accent);
     --gnome-accent: oklab(from var(--gnome-accent-bg) var(--gnome-standalone-color-oklab));
