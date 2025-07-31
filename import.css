@@ -22,61 +22,61 @@
 
 @container style(--gord-accent: gnome-blue) {
     #app-mount {
-        --brand-100: var(--gnome-palette-blue-1)!important;
-        --brand-300: var(--gnome-palette-blue-2)!important;
-        --brand-500: var(--gnome-palette-blue-3)!important;
-        --brand-700: var(--gnome-palette-blue-4)!important;
-        --brand-1000: var(--gnome-palette-blue-5)!important;
+        --brand-100: var(--gnome-palette-blue-1) !important;
+        --brand-300: var(--gnome-palette-blue-2) !important;
+        --brand-500: var(--gnome-palette-blue-3) !important;
+        --brand-700: var(--gnome-palette-blue-4) !important;
+        --brand-1000: var(--gnome-palette-blue-5) !important;
     }
 }
 
 @container style(--gord-accent: gnome-green) {
     #app-mount {
-        --brand-100: var(--gnome-palette-green-1)!important;
-        --brand-300: var(--gnome-palette-green-2)!important;
-        --brand-500: var(--gnome-palette-green-3)!important;
-        --brand-700: var(--gnome-palette-green-4)!important;
-        --brand-1000: var(--gnome-palette-green-5)!important;
+        --brand-100: var(--gnome-palette-green-1) !important;
+        --brand-300: var(--gnome-palette-green-2) !important;
+        --brand-500: var(--gnome-palette-green-3) !important;
+        --brand-700: var(--gnome-palette-green-4) !important;
+        --brand-1000: var(--gnome-palette-green-5) !important;
     }
 }
 
 @container style(--gord-accent: gnome-orange) {
     #app-mount {
-        --brand-100: var(--gnome-palette-orange-1)!important;
-        --brand-300: var(--gnome-palette-orange-2)!important;
-        --brand-500: var(--gnome-palette-orange-3)!important;
-        --brand-700: var(--gnome-palette-orange-4)!important;
-        --brand-1000: var(--gnome-palette-orange-5)!important;
+        --brand-100: var(--gnome-palette-orange-1) !important;
+        --brand-300: var(--gnome-palette-orange-2) !important;
+        --brand-500: var(--gnome-palette-orange-3) !important;
+        --brand-700: var(--gnome-palette-orange-4) !important;
+        --brand-1000: var(--gnome-palette-orange-5) !important;
     }
 }
 
 @container style(--gord-accent: gnome-purple) {
     #app-mount {
-        --brand-100: var(--gnome-palette-purple-1)!important;
-        --brand-300: var(--gnome-palette-purple-2)!important;
-        --brand-500: var(--gnome-palette-purple-3)!important;
-        --brand-700: var(--gnome-palette-purple-4)!important;
-        --brand-1000: var(--gnome-palette-purple-5)!important;
+        --brand-100: var(--gnome-palette-purple-1) !important;
+        --brand-300: var(--gnome-palette-purple-2) !important;
+        --brand-500: var(--gnome-palette-purple-3) !important;
+        --brand-700: var(--gnome-palette-purple-4) !important;
+        --brand-1000: var(--gnome-palette-purple-5) !important;
     }
 }
 
 @container style(--gord-accent: gnome-red) {
     #app-mount {
-        --brand-100: var(--gnome-palette-red-1)!important;
-        --brand-300: var(--gnome-palette-red-2)!important;
-        --brand-500: var(--gnome-palette-red-3)!important;
-        --brand-700: var(--gnome-palette-red-4)!important;
-        --brand-1000: var(--gnome-palette-red-5)!important;
+        --brand-100: var(--gnome-palette-red-1) !important;
+        --brand-300: var(--gnome-palette-red-2) !important;
+        --brand-500: var(--gnome-palette-red-3) !important;
+        --brand-700: var(--gnome-palette-red-4) !important;
+        --brand-1000: var(--gnome-palette-red-5) !important;
     }
 }
 
 @container style(--gord-accent: gnome-yellow) {
     #app-mount {
-        --brand-100: var(--gnome-palette-yellow-1)!important;
-        --brand-300: var(--gnome-palette-yellow-2)!important;
-        --brand-500: var(--gnome-palette-yellow-3)!important;
-        --brand-700: var(--gnome-palette-yellow-4)!important;
-        --brand-1000: var(--gnome-palette-yellow-5)!important;
+        --brand-100: var(--gnome-palette-yellow-1) !important;
+        --brand-300: var(--gnome-palette-yellow-2) !important;
+        --brand-500: var(--gnome-palette-yellow-3) !important;
+        --brand-700: var(--gnome-palette-yellow-4) !important;
+        --brand-1000: var(--gnome-palette-yellow-5) !important;
     }
 }
 
@@ -126,7 +126,8 @@
     .theme-dark,
     .theme-darker,
     .chatContent_f75fb0,
-    .contentRegion__23e6b, .chat_f75fb0 {
+    .contentRegion__23e6b,
+    .chat_f75fb0 {
         --background-primary: var(--gnome-view-background) !important;
         --background-base-lowest: var(--gnome-view-background) !important;
         --background-base-lower: var(--gnome-view-background) !important;
@@ -792,22 +793,24 @@ button.colorWhite__201d5:hover,
 
 .tabBar__6fdb8,
 .tabBar_f8303a,
-.tabBar_d6f9e9, .vc-settings-tab-bar {
+.tabBar_d6f9e9,
+.vc-settings-tab-bar {
     justify-content: space-evenly;
     overflow: hidden !important;
     gap: var(--gnome-toolbar-spacing);
-    border: 0px!important;
-max-width: 100%!important;
+    border: 0px !important;
+    max-width: 100% !important;
+
     .item_b3f026,
     .tab_f8303a {
-        flex-wrap: wrap!important;
+        flex-wrap: wrap !important;
         border-radius: var(--gnome-button-radius);
         flex: 1 !important;
         display: block;
-        align-content: center!important;
-        justify-self: center!important;
-        align-items: center!important;
-        justify-items: center!important;
+        align-content: center !important;
+        justify-self: center !important;
+        align-items: center !important;
+        justify-items: center !important;
         text-align: center !important;
         color: var(--interactive-normal) !important;
         height: var(--gnome-button-size) !important;
@@ -1466,6 +1469,10 @@ max-width: 100%!important;
     width: 100% !important;
     max-width: var(--gord-chat-width);
     justify-self: center;
+
+    &:hover {
+        background-color: transparent !important;
+    }
 }
 
 .header_c19a55 {
@@ -1481,7 +1488,7 @@ max-width: 100%!important;
     display: var(--gord-message-actions);
 }
 
-&.mentioned__5126c {
+.mentioned__5126c {
     background-color: var(--gnome-selection-bg);
     border-radius: var(--gnome-button-radius);
 
@@ -1492,10 +1499,6 @@ max-width: 100%!important;
     &:hover {
         background-color: var(--gnome-selection-bg) !important;
     }
-}
-
-&:hover {
-    background-color: transparent !important;
 }
 
 .timestampVisibleOnHover_c19a55 {
@@ -1597,121 +1600,119 @@ max-width: 100%!important;
 
 /* VOICE ------------------------------------------------ -------------------------------------- */
 
-.callContainer_cb9592 {
-    .tile_d6271c {
-        width: 200px !important;
 
-        .tileSizer_d6271c {
-            aspect-ratio: 1 / 1;
-            width: 200px;
+.tile_d6271c {
+    width: 200px !important;
+}
 
-            .tile__2f4f7,
-            .background_fb62e2 {
-                background: none !important;
-            }
+.tileSizer_d6271c {
+    aspect-ratio: 1 / 1;
+    width: 200px;
+}
 
-            .border__2f4f7 {
-                width: 84px;
-                height: 84px;
-                align-self: center;
-                justify-self: center;
-                border-radius: 100%;
-            }
+.tile__2f4f7,
+.background_fb62e2 {
+    background: none !important;
+}
 
-            .overlayContainer__2f4f7 {
-                z-index: 100;
-                width: 150px;
-                height: 150px;
-                align-self: center;
-                justify-self: center;
-                gap: 0;
+.border__2f4f7 {
+    width: 84px;
+    height: 84px;
+    align-self: center;
+    justify-self: center;
+    border-radius: 100%;
+}
 
-                .overlayBottom__2f4f7 {
-                    height: 130px;
-                    flex-direction: column-reverse;
-                    justify-content: space-between;
+.overlayContainer__2f4f7 {
+    z-index: 100;
+    width: 150px;
+    height: 150px;
+    align-self: center;
+    justify-self: center;
+    gap: 0;
+}
 
-                    .overlayTitle__2f4f7 {
-                        opacity: 1;
-                        top: 0;
-                        justify-content: center;
-                        padding: 6px;
-                        margin: 0px !important;
-                        background: linear-gradient(to top, black 0%, transparent 100%) !important;
-                        border-radius: 0px;
-                    }
+    .overlayBottom__2f4f7 {
+        height: 130px;
+        flex-direction: column-reverse;
+        justify-content: space-between;
 
-                    .statusContainer__2f4f7 {
-                        width: 84px;
-                        align-items: end;
-                        align-content: end;
-                        justify-content: end;
-
-                        .status__2f4f7 {
-                            backdrop-filter: blur(10px);
-                        }
-                    }
-                }
-            }
+        .overlayTitle__2f4f7 {
+            opacity: 1;
+            top: 0;
+            justify-content: center;
+            padding: 6px;
+            margin: 0px !important;
+            background: linear-gradient(to top, black 0%, transparent 100%) !important;
+            border-radius: 0px;
         }
 
-        .tileChild__2f4f7:has(.videoWrapper__2f4f7) {
-            .overlayContainer__2f4f7 {
-                width: calc(100% - 16px);
-                height: calc(100% - 16px);
-                z-index: auto;
-            }
+        .statusContainer__2f4f7 {
+            width: 84px;
+            align-items: end;
+            align-content: end;
+            justify-content: end;
 
-            .border__2f4f7 {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                border-radius: var(--custom-base-tile-border-radius);
-                pointer-events: none;
-                width: 100%;
-                height: 100%;
+            .status__2f4f7 {
+                backdrop-filter: blur(10px);
             }
         }
     }
 
-    .row_d6271c:has(.singleUserRoot__4ad81) {
+.tileChild__2f4f7:has(.videoWrapper__2f4f7) {
+    .overlayContainer__2f4f7 {
+        width: calc(100% - 16px);
+        height: calc(100% - 16px);
+        z-index: auto;
+    }
+
+    .border__2f4f7 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: var(--custom-base-tile-border-radius);
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.row_d6271c:has(.singleUserRoot__4ad81) {
+    width: 100% !important;
+
+    .tile_d6271c,
+    .tileSizer_d6271c {
         width: 100% !important;
+        aspect-ratio: auto;
 
-        .tile_d6271c,
-        .tileSizer_d6271c {
-            width: 100% !important;
-            aspect-ratio: auto;
+        .singleUserRoot__4ad81 {
+            background: none;
+            padding: 0px;
 
-            .singleUserRoot__4ad81 {
-                background: none;
-                padding: 0px;
+            img {
+                display: none;
+            }
 
-                img {
-                    display: none;
-                }
-
-                .buttonContainer__4ad81 {
-                    margin-top: 0px;
-                }
+            .buttonContainer__4ad81 {
+                margin-top: 0px;
             }
         }
     }
+}
 
-    .listItems_affa7e {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0px;
-    }
+.listItems_affa7e {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0px;
+}
 
-    .controlSection_bfe55a {
-        opacity: 1 !important;
-        transform: none !important;
-    }
-
+.controlSection_bfe55a {
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 /* SERVERLIST  -------------------------------------------------- */
@@ -1802,8 +1803,10 @@ max-width: 100%!important;
 }
 
 
-.members_c8ffbb, .container_c8ffbb, .member__5d473 {
-    background: transparent!important;
-    border: none!important;
-    --custom-channel-members-bg: transparent!important;
+.members_c8ffbb,
+.container_c8ffbb,
+.member__5d473 {
+    background: transparent !important;
+    border: none !important;
+    --custom-channel-members-bg: transparent !important;
 }

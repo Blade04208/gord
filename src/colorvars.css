@@ -1,4 +1,4 @@
-:root {
+#app-mount {
     --gnome-toolbar-padding: 6px;
     --gnome-toolbar-spacing: 6px;
     --gnome-button-radius: 9px;
@@ -165,7 +165,7 @@
     --gnome-tabbar-identity-color-purple: var(--gnome-palette-purple-4);
 }
 
-.theme-dark {
+.theme-dark #app-mount {
 
     --gnome-warning-bg: #cd9309;
 
