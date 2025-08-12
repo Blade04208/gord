@@ -1,5 +1,5 @@
 @import url(./src/colorvars.css);
-@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Google.css);
+/* @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Google.css); */
 
 :root {
     --gord-chat-width: 1000px;
@@ -8,7 +8,7 @@
 }
 
 @property --gord-accent {
-    syntax: "<color> | gnome-blue | gnome-green | gnome-orange | gnome-purple | gnome-red | gnome-yellow";
+    syntax: "<color> | gnome-blue | gnome-green | gnome-orange | gnome-purple | gnome-red | gnome-yellow | gnome-teal | gnome-pink | gnome-slate";
     initial-value: gnome-blue;
 }
 
@@ -22,63 +22,55 @@
 
 @container style(--gord-accent: gnome-blue) {
     #app-mount {
-        --brand-100: var(--gnome-palette-blue-1) !important;
-        --brand-300: var(--gnome-palette-blue-2) !important;
-        --brand-500: var(--gnome-palette-blue-3) !important;
-        --brand-700: var(--gnome-palette-blue-4) !important;
-        --brand-1000: var(--gnome-palette-blue-5) !important;
+        --brand-500: var(--accent-blue) !important;
     }
 }
 
 @container style(--gord-accent: gnome-green) {
     #app-mount {
-        --brand-100: var(--gnome-palette-green-1) !important;
-        --brand-300: var(--gnome-palette-green-2) !important;
-        --brand-500: var(--gnome-palette-green-3) !important;
-        --brand-700: var(--gnome-palette-green-4) !important;
-        --brand-1000: var(--gnome-palette-green-5) !important;
+        --brand-500: var(--accent-green) !important;
     }
 }
 
 @container style(--gord-accent: gnome-orange) {
     #app-mount {
-        --brand-100: var(--gnome-palette-orange-1) !important;
-        --brand-300: var(--gnome-palette-orange-2) !important;
-        --brand-500: var(--gnome-palette-orange-3) !important;
-        --brand-700: var(--gnome-palette-orange-4) !important;
-        --brand-1000: var(--gnome-palette-orange-5) !important;
+        --brand-500: var(--accent-orange) !important;
     }
 }
 
 @container style(--gord-accent: gnome-purple) {
     #app-mount {
-        --brand-100: var(--gnome-palette-purple-1) !important;
-        --brand-300: var(--gnome-palette-purple-2) !important;
-        --brand-500: var(--gnome-palette-purple-3) !important;
-        --brand-700: var(--gnome-palette-purple-4) !important;
-        --brand-1000: var(--gnome-palette-purple-5) !important;
+        --brand-500: var(--accent-purple) !important;
     }
 }
 
 @container style(--gord-accent: gnome-red) {
     #app-mount {
-        --brand-100: var(--gnome-palette-red-1) !important;
-        --brand-300: var(--gnome-palette-red-2) !important;
-        --brand-500: var(--gnome-palette-red-3) !important;
-        --brand-700: var(--gnome-palette-red-4) !important;
-        --brand-1000: var(--gnome-palette-red-5) !important;
+        --brand-500: var(--accent-red) !important;
     }
 }
 
 @container style(--gord-accent: gnome-yellow) {
     #app-mount {
-        --brand-100: var(--gnome-palette-yellow-1) !important;
-        --brand-300: var(--gnome-palette-yellow-2) !important;
-        --brand-500: var(--gnome-palette-yellow-3) !important;
-        --brand-700: var(--gnome-palette-yellow-4) !important;
-        --brand-1000: var(--gnome-palette-yellow-5) !important;
+        --brand-500: var(--accent-yellow) !important;
     }
 }
+@container style(--gord-accent: gnome-teal) {
+    #app-mount {
+        --brand-500: var(--accent-teal) !important;
+    }
+}
+@container style(--gord-accent: gnome-pink) {
+    #app-mount {
+        --brand-500: var(--accent-pink) !important;
+    }
+}
+@container style(--gord-accent: gnome-slate) {
+    #app-mount {
+        --brand-500: var(--accent-slate) !important;
+    }
+}
+
 
 #app-mount {
     --brand-200: var(--brand-100);
@@ -103,54 +95,44 @@
     --background-message-highlight: color-mix(in srgb, var(--brand-500), transparent 80%) !important;
     --redesign-input-control-selected: var(--brand-500) !important;
     --gnome-entry-focused-border-color: color-mix(in srgb, var(--brand-500) 50%, transparent);
+    --interactive-normal: var(--gnome-toolbar-icon-fill) !important;
+    --custom-app-top-bar-height: 0px !important;
 }
 
 .container__87bf1.checked__87bf1 {
     background-color: var(--brand-500) !important;
 }
 
-/* .visual-refresh .theme-dark,
-.visual-refresh .theme-light {
-    --bg-brand: var(--brand-500) !important;
-} */
+/* 
 [class^="scroller_"] {
     will-change: scroll-position !important;
-}
+} */
 
-.visual-refresh {
 
-    .recentMentionsPopout__95796,
-    .layer_da8173,
-    .sidebar_c48ade,
-    .guilds_c48ade,
-    .theme-dark,
-    .theme-darker,
-    .chatContent_f75fb0,
-    .contentRegion__23e6b,
-    .chat_f75fb0 {
-        --background-primary: var(--gnome-view-background) !important;
-        --background-base-lowest: var(--gnome-view-background) !important;
-        --background-base-lower: var(--gnome-view-background) !important;
-        --background-base-low: var(--gnome-view-background) !important;
-        --__header-bar-background: var(--gnome-view-background) !important;
-        --background-secondary: var(--gnome-secondary-sidebar-background);
-        --bg-base-secondary: var(--gnome-view-background) !important;
-        --background-tertiary: var(--gnome-sidebar-background);
-        --bg-base-tertiary: var(--gnome-sidebar-background) !important;
-        --background-secondary-alt: var(--gnome-sidebar-background);
-        --channel-icon: var(--gnome-toolbar-icon-fill);
-        --interactive-normal: var(--gnome-toolbar-icon-fill);
-        --status-danger: var(--gnome-palette-red-2);
-        --text-positive: var(--gnome-palette-green-3);
-        --button-positive-background: var(--gnome-palette-green-3) !important;
-        --input-background: var(--gnome-entry-background);
-        --input-border: var(--gnome-entry-focused-border-color);
-        --modal-background: var(--gnome-window-background);
-        --home-background: var(--gnome-view-background);
-        --bg-base-primary: var(--gnome-view-background);
-        --chat-background-default: var(--gnome-view-background) !important;
-        --border-subtle: transparent !important;
-    }
+.theme-dark,
+.theme-light {
+    --background-primary: var(--gnome-view-background) !important;
+    --background-base-lowest: var(--gnome-view-background) !important;
+    --background-base-lower: var(--gnome-view-background) !important;
+    --background-base-low: var(--gnome-view-background) !important;
+    --__header-bar-background: var(--gnome-view-background) !important;
+    --background-secondary: var(--gnome-sidebar-background);
+    --bg-base-secondary: var(--gnome-view-background) !important;
+    --background-tertiary: var(--gnome-secondary-sidebar-background);
+    --bg-base-tertiary: var(--gnome-secondary-sidebar-background) !important;
+    --background-secondary-alt: var(--gnome-secondary-sidebar-background);
+    --channel-icon: var(--gnome-toolbar-icon-fill);
+    --interactive-normal: var(--gnome-toolbar-icon-fill);
+    --status-danger: var(--gnome-palette-red-2);
+    --text-positive: var(--gnome-palette-green-3);
+    --button-positive-background: var(--gnome-palette-green-3) !important;
+    --input-background: var(--gnome-entry-background);
+    --input-border: var(--gnome-entry-focused-border-color);
+    --modal-background: var(--gnome-window-background);
+    --home-background: var(--gnome-view-background);
+    --bg-base-primary: var(--gnome-view-background);
+    --chat-background-default: var(--gnome-view-background) !important;
+    --border-subtle: transparent !important;
 }
 
 html {
@@ -162,34 +144,33 @@ html {
     background: var(--gnome-window-background) !important;
 }
 
-/* fuck visual refresh */
+
 .privateChannels__35e86,
 .scroller__99e7c,
 .container__2637a {
-    background-color: var(--gnome-secondary-sidebar-background) !important;
+    background-color: var(--gnome-sidebar-background) !important;
 }
 
 .guilds_c48ade,
 .sidebar_c48ade {
-    background-color: var(--gnome-sidebar-background) !important;
+    background-color: var(--gnome-secondary-sidebar-background) !important;
+    box-shadow: inset -1px 0 var(--gnome-secondary-sidebar-border-color);
 }
 
 .tabBody__133bf,
 .peopleColumn__133bf,
-.container__7d20c {
+.container__7d20c,
+.contentRegion__23e6b,
+.chat_f75fb0 {
     background: var(--gnome-view-background);
 }
 
-.guilds_c48ade,
-.tree_ef3116 {
-    overflow: visible !important;
-}
 
 /* .itemsContainer_ef3116{
     overflow: visible scroll;
 } */
 /* --lag fix-- */
-/* .guilds_c48ade, */
+.guilds_c48ade,
 /* server list */
 .chatContent_f75fb0,
 /* main chat messages container */
@@ -214,12 +195,260 @@ html {
     font-weight: 400;
 }
 
-/* titlebar                 - -------------------------------------------- */
-#app-mount {
-    --custom-app-top-bar-height: 0px !important;
+.buttonChildrenWrapper__6af3a {
+    padding: 0px !important;
+    min-height: 0px !important;
+    min-width: 0px !important;
 }
 
-/* Shrinks titlebar down to nothing */
+
+
+
+.button__6af3a,
+.button__201d5 {
+    min-height: 24px !important;
+    min-width: 16px !important;
+    height: 34px !important;
+    padding: 5px 10px !important;
+    border-radius: var(--gnome-button-radius) !important;
+    border: none !important;
+    color: var(--gnome-toolbar-icon-fill, red);
+
+    &:hover {
+        background-color: var(--gnome-button-hover-background) !important;
+    }
+
+    &.keyboard-activating,
+    &:active {
+        background-color: var(--gnome-button-active-background);
+    }
+
+    &.md__6af3a {
+        min-height: 34px !important;
+    }
+
+    &:disabled {
+        filter: opacity(var(--disabled-opacity));
+
+        label {
+            filter: none;
+        }
+    }
+
+    &:not(.hasText__6af3a, :has(.contents__201d5)):has(svg) {
+        min-width: 34px !important;
+        min-height: 34px !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    &.hasText__6af3a:not(:has(svg)),
+    &:has(.contents__201d5):not(:has(svg)) {
+        padding-left: 17px !important;
+        padding-right: 17px !important;
+    }
+
+    &.hasText__6af3a:has(svg),
+    &:has(.contents__201d5):has(svg) {
+        padding-left: 9px !important;
+        padding-right: 9px !important;
+
+        span {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+    }
+
+    span,
+    .contents__201d5 {
+        font-weight: bold !important;
+    }
+
+    &.critical-primary__6af3a {
+        background: var(--gnome-destructive-bg) !important;
+        color: white !important;
+
+        &:hover {
+            background: color-mix(in srgb, var(--gnome-destructive-bg), white 15%) !important;
+        }
+    }
+
+
+    &.critical-secondary__6af3a {
+        background: var(--gnome-button-destructive-background) !important;
+        color: var(--gnome-destructive) !important;
+
+        &:hover {
+            background: var(--gnome-button-destructive-hover-background) !important;
+        }
+    }
+
+    &.primary__6af3a {
+        background: var(--gnome-accent-bg) !important;
+        color: white !important;
+
+        &:hover {
+            background: color-mix(in srgb, var(--gnome-accent-bg), white 10%) !important;
+        }
+    }
+
+    &.active__6af3a {
+        background: var(--gnome-success-bg) !important;
+        color: white !important;
+
+        &:hover {
+            background: color-mix(in srgb, var(--gnome-success-bg), white 10%) !important;
+        }
+    }
+
+    &.overlay-primary__6af3a {
+        color: var(--control-text-overlay-primary-default) !important;
+    }
+
+    &.expressive__6af3a {
+        color: var(--control-text-expressive-default);
+    }
+
+    /*-- below are for reference, and not used in discord */
+
+    /* &.circular {
+        // force circular button shape
+        min-width: 34px;
+        min-height: 34px;
+        padding: 0;
+        border-radius: 9999px !important;
+
+        label {
+            padding: 0;
+        }
+    }
+
+
+    &.pill {
+        padding: 10px 32px !important;
+        border-radius: 9999px !important;
+    } */
+}
+
+.avatarWrapper__37e49 {
+    flex-direction: column;
+    width: auto;
+    min-width: 48px;
+    height: 48px;
+    box-sizing: border-box;
+    justify-content: center;
+    flex: 1 !important;
+    border-radius: var(--radius-sm);
+
+    .avatar__37e49 {
+        width: 20px !important;
+        height: 20px !important;
+
+        >svg {
+            scale: 0.625;
+            top: -8px;
+            left: -8px;
+        }
+    }
+
+    .nameTag__37e49 {
+        flex-grow: unset !important;
+        width: max-content;
+    }
+
+    .panelSubtextContainer__37e49 {
+        display: none;
+    }
+
+    .panelTitleContainer__37e49 {
+        margin: 0px;
+        width: fit-content;
+
+        >div {
+            line-height: 13px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-family: var(--font-primary);
+            font-size: 12px;
+            font-weight: 500;
+            width: fit-content;
+            overflow: hidden !important;
+        }
+    }
+}
+
+.buttons__37e49 {
+    display: contents;
+
+    .button__67645 {
+        display: flex;
+        flex-direction: column;
+        min-width: 48px;
+        width: auto;
+        flex: 1;
+        gap: 8px;
+        padding: 5px calc(var(--custom-guild-list-padding) - var(--custom-panels-spacing) - 4px);
+        min-height: 48px !important;
+        box-sizing: border-box;
+
+        &::after {
+            color: inherit;
+            content: attr(aria-label);
+            line-height: 12px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-family: var(--font-primary);
+            font-size: 12px;
+            font-weight: 500;
+            max-width: 100%;
+            text-align: end;
+            overflow: hidden !important;
+        }
+
+        &.redGlow__67645::after {
+            color: var(--status-danger);
+        }
+    }
+}
+
+.container__37e49 {
+    justify-content: center;
+    /* flex-direction: row-reverse; */
+    padding: 4px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+.micButtonParent__37e49 {
+    flex: 1;
+}
+
+.panels_c48ade {
+    border-radius: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: calc(100%);
+    border: none;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+    background: var(--gnome-sidebar-background);
+    filter: drop-shadow(0px -1px color-mix(in srgb, var(--gnome-secondary-sidebar-border-color), transparent 45%));
+}
+
+.sidebar_c48ade:after {
+    display: none;
+}
+
+.sidebarList_c48ade {
+    border-radius: 0px !important;
+    border: none;
+    overflow: hidden !important;
+}
+
+.header_c19a55 {
+    display: flex !important;
+    justify-content: space-between;
+}
+
 .bar_c38106 {
     min-height: 0px !important;
     height: 0px !important;
@@ -229,6 +458,11 @@ html {
     z-index: 2000;
 }
 
+.title_c38106,
+.winButtonsWithDivider_c38106::before {
+    display: none;
+}
+
 .trailing_c38106 {
     position: fixed !important;
     top: 30px;
@@ -236,18 +470,12 @@ html {
     z-index: 200;
     -webkit-app-region: no-drag !important;
 
-    * {
+    >div,
+    >a {
         -webkit-app-region: no-drag !important;
     }
 }
 
-/* Removes the "Discord" text on the top left of the screen */
-.title_c38106,
-.winButtonsWithDivider_c38106::before {
-    display: none;
-}
-
-/* Scale the _ □ X buttons to match top bar icons */
 .winButton_c38106 {
     top: 10px;
     right: 13px;
@@ -257,7 +485,6 @@ html {
     border-radius: 50%;
     background-color: var(--gnome-button-background);
     color: var(--gnome-toolbar-icon-fill);
-    -webkit-app-region: no-drag !important;
 
     >svg {
         background: var(--gnome-toolbar-icon-fill);
@@ -276,41 +503,21 @@ html {
     display: none;
 }
 
-/* small hack to avoid https://github.com/electron/electron/issues/1354 */
-.winButtonClose_c38106 {
-    -webkit-app-region: no-drag;
+.upperContainer__9293f {
+    max-width: calc(100% - 116px);
+    justify-items: end;
+    overflow: hidden;
 }
 
-div[class^="upperContainer_"] {
-    width: calc(100% - 116px);
-}
-
-/* revert offset when thread/forum channel is open */
-div[class*="threadSidebarOpen_"]>div>section>div[class^="upperContainer_"] {
-    width: 100%;
-}
-
-
-/*subtitleheader ------------------------------        ------------ -- -*/
-.container__9293f {
-    --__header-bar-background: var(--gnome-view-background) !important;
-    background-color: var(--gnome-view-background) !important;
-}
-
-.subtitleContainer_f75fb0 {
-    box-shadow: var(--elevation-stroke);
-
-    .title_f75fb0 {
-        min-height: 46px !important;
-        max-height: 46px;
-        padding: 0 16px;
-    }
+.title_f75fb0 {
+    min-height: 46px !important;
+    max-height: 46px;
+    padding: 0 16px;
 }
 
 .toolbar__9293f .iconWrapper__9293f {
     width: var(--gnome-button-size);
     height: var(--gnome-button-size);
-    margin: 0 4px;
     border-radius: var(--gnome-button-radius);
     align-content: center;
     pointer-events: all !important;
@@ -354,484 +561,42 @@ div[class*="threadSidebarOpen_"]>div>section>div[class^="upperContainer_"] {
     }
 }
 
-.titleWrapper_fc4f04 {
-    min-height: 46px !important;
-    max-height: 46px;
-    margin: 0px;
+.root__49fc1 {
+    border-radius: 24px !important;
+    background: var(--modal-footer-background);
 
-    >h1 {
-        justify-content: center;
-        font-size: 15px;
-        overflow: visible;
-    }
-}
-
-.topic__6ec1a {
-    line-height: 13px;
-    font-size: 13px;
-    color: #999999;
-    overflow: visible;
-    pointer-events: all;
-    -webkit-app-region: no-drag !important;
-    flex: none;
-
-    .topicClickTarget__6ec1a {
-        width: 100%;
-        height: 100%;
-        padding: 4px 0;
-        box-sizing: content-box;
-        top: -4px;
-    }
-}
-
-[class^="title_"] [class^="children_"] [class^="iconWrapper_"] {
-    display: none;
-}
-
-.search__49676 {
-    margin: 0 4px;
-}
-
-.search__97492:not(.open__97492) {
-    overflow: hidden;
-    border-radius: var(--gnome-button-radius);
-
-    &>.searchBar__97492 {
-        width: var(--gnome-button-size);
-        background: transparent;
-        border: none;
-        height: var(--gnome-button-size);
-    }
-
-    & .icon__97492 {
-        cursor: pointer;
-        width: var(--gnome-button-size) !important;
-        height: var(--gnome-button-size);
-
-        &>.iconContainer_fea832 {
-            width: var(--gnome-button-size) !important;
-            height: var(--gnome-button-size);
-            border-radius: var(--gnome-button-radius);
-            align-content: center;
-            pointer-events: all !important;
-            padding: 0px;
-            transform: scale(1) translate(-8px, -2px);
-            max-width: none;
-            min-width: var(--gnome-button-size);
-
-            &>svg.icon_fea832 {
-                color: var(--interactive-normal);
-                margin: 0 4px;
-                transform: scale(0.6) translate(-7px, -1px);
-            }
-
-            &:hover {
-                background-color: var(--gnome-button-hover-background);
-            }
-        }
-    }
-
-    &:hover::before {
-        position: absolute;
-        border-radius: 5px;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        box-sizing: border-box;
-        word-wrap: break-word;
-        z-index: 1002;
-        top: calc(100% + 8px);
-        left: 50%;
-        transform: translateX(-50%);
-        color: var(--text-normal);
-        padding: 8px 12px;
-        background-color: var(--background-floating);
-        content: 'Search';
-        box-shadow: var(--elevation-high);
-        border: 1px solid var(--border-subtle);
-    }
-
-    &:hover::after {
-        width: 0;
-        height: 0;
-        border: 0 solid transparent;
-        border-width: 5px;
-        pointer-events: none;
-        position: absolute;
-        z-index: 1;
-        top: calc(100% - 1.7px);
-        content: '';
-        border-top-color: var(--background-floating);
-        bottom: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-top-width: 5px;
-        transform: rotate(180deg);
-    }
-
-    /* iconifies search, made by obsidian */
-}
-
-.upperContainer__9293f {
-    -webkit-app-region: drag;
-}
-
-/* CHANNLE LIST ------------ --------------- --          ------ */
-.bannerImage_f37cb1 {
-    width: 100%;
-
-    .bannerImg_f37cb1 {
-        width: 100%;
-    }
-}
-
-.scroller__99e7c {
-    margin-bottom: var(--custom-app-panels-height) !important;
-}
-
-.sidebar_c48ade {
-    min-width: 280px !important;
-    width: 280px !important;
-    border-radius: 0px;
-
-    &::after {
-        display: none !important;
-    }
-
-    .sidebarList_c48ade {
-        border-radius: 0px !important;
-    }
-}
-
-.header_f37cb1 {
-    height: 46px;
-
-    .name_f37cb1 {
-        margin-left: auto;
-        text-align: center;
-
-    }
-
-    .guildIconV2Container__85d16 {
-        margin: 0;
-        width: 18px;
-
-        .flowerStarContainer__3e3b0 {
-            margin-left: 1px;
-        }
-    }
-}
-
-.panels_c48ade {
-    left: var(--custom-guild-list-width) !important;
-    bottom: 0px !important;
-    width: calc(100% - var(--custom-guild-list-width)) !important;
-    border-radius: 0px !important;
-    border: none !important;
-    background: linear-gradient(to top, var(--gnome-secondary-sidebar-background) 0%, transparent 100%) !important;
-
-    .container__37e49 {
-        justify-content: space-between;
-    }
-}
-
-.dm__972a0,
-.channel__972a0 {
-    max-width: none;
-    border-radius: var(--gnome-button-radius);
-
-    .layout__20a53 {
-        border-radius: var(--gnome-button-radius);
-    }
-}
-
-.link__972a0 {
-    border-radius: var(--gnome-button-radius);
-}
-
-.containerDefault_c69b6d .link__2ea32 {
-    height: 34px !important;
-    align-content: center;
-    justify-content: center;
-    border-radius: var(--gnome-button-radius);
-
-    &:hover {
-        background-color: var(--gnome-button-hover-background);
-    }
-}
-
-.containerDefault_c69b6d.selected_c69b6d .link__2ea32 {
-    background-color: var(--gnome-button-checked-background);
-
-    &:hover {
-        background-color: var(--gnome-button-checked-hover-background);
-    }
-
-}
-
-.containerDefault__29444 {
-    padding: 0px;
-}
-
-.sectionDivider__629e4 {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.containerWithMargin_eff079 {
-    margin-bottom: 6px;
-}
-
-.content__99f8c div[style="height: 12px;"] {
-    height: 6px !important;
-}
-
-.privateChannels__35e86 .searchBar__35e86 {
-    max-height: 46px;
-
-    .button__201d5 {
-        margin-left: auto;
-        font-size: 0px;
-        width: 34px;
-        height: 34px;
-        min-width: 34px;
-        min-height: 34px;
-        padding: 0px;
-        overflow: visible;
-        background-color: transparent !important;
-        background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1618_9)'%3E%3Cpath d='M15.6055 9.05859C12.0273 9.05859 9.10547 11.9805 9.10547 15.5586C9.10547 19.1367 12.0273 22.0547 15.6055 22.0547C17.0352 22.0547 18.3594 21.5898 19.4336 20.8008L22.4062 23.7734C23.3633 24.7148 24.7695 23.2773 23.8125 22.3359L20.8555 19.3789C21.6367 18.3047 22.1055 16.9844 22.1055 15.5586C22.1055 11.9805 19.1797 9.05859 15.6055 9.05859ZM15.6055 11.0586C18.1016 11.0586 20.1055 13.0625 20.1055 15.5586C20.1055 18.0547 18.1016 20.0547 15.6055 20.0547C13.1055 20.0547 11.1055 18.0547 11.1055 15.5586C11.1055 13.0625 13.1055 11.0586 15.6055 11.0586Z' fill='white' style='fill:white;fill-opacity:1;'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1618_9'%3E%3Crect width='16' height='16' fill='white' style='fill:white;fill-opacity:1;' transform='translate(9 9)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
-        border-radius: var(--gnome-button-radius);
-        transition: background-color 0.2s;
-        box-sizing: content-box;
-
-        &:hover {
-            background-color: var(--gnome-button-hover-background) !important;
-        }
-
-        .contents__201d5 {
-            display: none;
-        }
-
-    }
-
-    &::before {
-        position: absolute;
-        content: "Discord";
-        font-size: 16px;
-        color: var(--gnome-toolbar-icon-fill);
-        left: 0px;
-        right: 0px;
-        align-self: center;
-        justify-self: center;
-        pointer-events: none;
-        font-weight: 600;
-    }
-}
-
-/* Notices -------------------------------------------*/
-.notice__6e2b9 {
-    position: fixed;
-    right: 0px;
-    top: 68px;
-    width: calc(100vw - var(--custom-guild-sidebar-width)) !important;
-    height: 46px !important;
-    padding: 0px 6px !important;
-    box-sizing: border-box !important;
-    display: flex;
-    align-content: center;
-    flex-wrap: nowrap !important;
-    border-radius: 0px;
-
-    .defaultColor__4bd52 {
-        width: 100% !important;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+    .header__49fc1 {
         align-content: center;
+        justify-content: center;
     }
 
-    .closeButton__6e2b9 {
-        position: relative;
-    }
+    .footer__49fc1 {
+        flex-direction: column;
+        gap: 8px;
 
-    >* {
-        height: 100%;
-    }
-
-    svg {
-        top: 0px !important;
-    }
-
-    button {
-        height: var(--gnome-button-size);
-        border-radius: var(--gnome-button-radius);
-        white-space: nowrap;
-        justify-self: right;
-    }
-}
-
-
-
-/* BUTON STYLING/swtich styling -----------------------*/
-.section__6fdb8 {
-    --background-primary: var(--gnome-window-background);
-}
-
-.button__201d5 {
-    border-radius: var(--gnome-button-radius);
-}
-
-:root {
-    --c: var(--interactive-normal)
-}
-
-.lookOutlined__201d5,
-.lookFilled__201d5 {
-    border: none !important;
-    background-color: var(--bg) !important;
-    color: var(--c) !important;
-
-    &:hover {
-        background-color: var(--h) !important;
-        color: var(--c) !important;
-    }
-}
-
-button:not(.lookOutlined__201d5, .lookFilled__201d5, .lookLink__201d5).lowSaturationUnderline__41f68.sizeMedium__201d5,
-.refreshVoiceChannelsButton__29444,
-button.colorPrimary__201d5,
-button.colorWhite__201d5,
-.upsellButtonsContainer__675aa button.colorBrandInverted__201d5 {
-    background-color: var(--gnome-button-background) !important;
-
-    .contents__201d5 {
-        color: white !important;
-    }
-}
-
-button:not(.lookOutlined__201d5, .lookFilled__201d5, .lookLink__201d5).sizeMedium__201d5:hover,
-.refreshVoiceChannelsButton__29444:hover,
-button.colorPrimary__201d5:hover,
-button.colorWhite__201d5:hover,
-.upsellButtonsContainer__675aa button.button__201d5:hover {
-    background-color: var(--gnome-button-hover-background) !important;
-
-    .contents__201d5 {
-        --button--underline-color: transparent !important;
-    }
-}
-
-.colorRed__201d5 {
-    --bg: var(--gnome-button-destructive-background);
-    --c: var(--gnome-destructive);
-    --h: var(--gnome-button-destructive-hover-background);
-}
-
-.colorBrand__201d5 {
-    --bg: var(--brand-500);
-    --c: white;
-    --h: var(--brand-700)
-}
-
-.colorGreen__201d5 {
-    --bg: var(--gnome-button-success-background);
-    --c: var(--gnome-success);
-    --h: var(--gnome-button-success-hover-background);
-}
-
-.boostButton__25ea7 {
-    --bg: color-mix(in srgb, var(--gnome-palette-purple-2) 15%, transparent);
-    --c: var(--gnome-palette-purple-2);
-    --h: color-mix(in srgb, var(--gnome-palette-purple-2) 20%, transparent);
-}
-
-.control__9d263 .checked__87bf1 {
-    background-color: var(--brand-500) !important;
-}
-
-.slider__87bf1 svg {
-    display: none;
-}
-
-.sizeMedium__201d5,
-.sizeLarge__201d5 {
-    border-radius: 20px;
-    padding: 2px 20px;
-    min-height: var(--gnome-button-size);
-    height: var(--gnome-button-size);
-    max-height: var(--gnome-button-size);
-}
-
-.metadataRefreshButton_c7f964 {
-    background-color: var(--gnome-button-background) !important;
-
-    &:hover {
-        background-color: var(--gnome-button-hover-background) !important;
-    }
-}
-
-.inputDefault__0f084 {
-    height: var(--gnome-entry-height);
-    border-radius: var(--gnome-button-radius);
-    overflow: visible;
-    width: 100%;
-
-    &:focus {
-        border: 2px solid var(--gnome-entry-focused-border-color);
-
-    }
-}
-
-.select__3f413 {
-    border: none;
-}
-
-.optionButtonWrapper__270d7.selected__270d7,
-.reaction__23977.reactionMe__23977 {
-    background: var(--gnome-selection-bg) !important;
-}
-
-.tabBar__6fdb8,
-.tabBar_f8303a,
-.tabBar_d6f9e9,
-.vc-settings-tab-bar {
-    justify-content: space-evenly;
-    overflow: hidden !important;
-    gap: var(--gnome-toolbar-spacing);
-    border: 0px !important;
-    max-width: 100% !important;
-
-    .item_b3f026,
-    .tab_f8303a {
-        flex-wrap: wrap !important;
-        border-radius: var(--gnome-button-radius);
-        flex: 1 !important;
-        display: block;
-        align-content: center !important;
-        justify-self: center !important;
-        align-items: center !important;
-        justify-items: center !important;
-        text-align: center !important;
-        color: var(--interactive-normal) !important;
-        height: var(--gnome-button-size) !important;
-        padding-bottom: 0px !important;
-        margin: 0px !important;
-
-        &.selected_b3f026 {
-            background-color: var(--gnome-button-background);
+        >button,
+        >.cancel_b404ff>button {
+            flex: 1;
+            width: 100%;
+            height: auto !important;
+            padding: 14px 17px !important;
         }
 
-        &:hover {
-            background-color: var(--gnome-button-hover-background);
+        >.cancel_b404ff {
+            margin-right: 0px !important;
         }
+    }
 
-        &::after {
-            display: none !important;
+    .stack_dbd263 {
+        button {
+            flex: 1;
+            height: auto !important;
+            padding: 12px 17px !important;
         }
     }
 }
 
-/* SETTINGS ------------------------------- -------------- -- - - - */
+
 .standardSidebarView__23e6b {
     position: absolute;
     width: 100vw;
@@ -844,151 +609,98 @@ button.colorWhite__201d5:hover,
     border-radius: 10px;
     overflow: hidden;
     border: rgba(255, 255, 255, 0.1) 1px solid;
-}
 
-.contentRegion__23e6b {
-    width: calc(100% - 270px);
-    display: block;
-    flex: none;
-}
 
-.contentColumn__23e6b:not([id*="vencord"], [id*="vesktop"]) {
-    /* vencord tabs excluded because they are literally the only ones that break lmfao */
-    min-width: 0px !important;
-    width: 100%;
-    padding: 0px 20px;
-
-    >.settingsPage_f131e9 {
-        >div {
-            padding-top: 66px;
-        }
-
-        >h3 {
-            font-size: 16px;
-            z-index: 5000;
-            height: 46px;
-            align-content: center;
-            text-align: center;
-            width: calc(100vw - 270px - 50px);
-            max-width: calc(1000px - 270px - 50px);
-            position: fixed;
-        }
+    .contentRegion__23e6b {
+        width: calc(100% - 270px);
+        display: block;
+        flex: none;
     }
 
-    >div>h2[data-text-variant="heading-lg/semibold"],
-    >div>.sectionTitle__7bffb>h2,
-    >h2[data-text-variant="heading-lg/semibold"] {
-        font-size: 16px;
-        z-index: 100;
-        height: 46px;
-        align-content: center;
-        text-align: center;
-        width: calc(100vw - 270px - 50px);
-        max-width: calc(1000px - 270px - 50px);
-        position: fixed;
-        pointer-events: none;
-    }
-
-    >div>.children__7bffb,
-    .tabBar_d6f9e9,
-    .vc-settings-tab-bar,
-    .vc-special-card,
-    >div>.h5_b717a1 {
-        margin-top: 66px;
-    }
-
-    .headerContainer__6a750 {
-        justify-content: center;
-    }
-}
-
-.toolsContainer__23e6b {
-    margin: 0;
-    position: absolute;
-    right: 0px;
-    top: 0;
-    flex: none;
-    background-color: var(--gnome-view-background) !important;
-    padding: 0px;
-    margin: 0px !important;
-    height: 46px;
-    width: 100%;
-    box-shadow: var(--elevation-low);
-
-    .tools__23e6b {
+    .toolsContainer__23e6b {
+        margin: 0;
         position: absolute;
-        top: 10px;
-        right: 20px;
-        z-index: 5000;
+        right: 0px;
+        top: 0;
+        flex: none;
+        background-color: var(--gnome-view-background) !important;
+        padding: 0px;
+        margin: 0px !important;
+        height: 46px;
+        width: 100%;
+        box-shadow: var(--elevation-low);
 
-        .closeButton_c2b141 {
-            border-radius: 50%;
-            background-color: var(--gnome-button-background);
-            color: var(--gnome-toolbar-icon-fill);
-            height: 25px !important;
-            width: 25px !important;
-            border: none;
-            flex: none;
+        .tools__23e6b {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            z-index: 5000;
 
-            >svg {
-                margin: 9px 0px 0px 9px;
-                width: 18px !important;
-                height: 18px !important;
-                overflow: visible;
+            .closeButton_c2b141 {
+                border-radius: 50%;
+                background-color: var(--gnome-button-background);
+                color: var(--gnome-toolbar-icon-fill);
+                height: 25px !important;
+                width: 25px !important;
+                border: none;
+                flex: none;
 
-                >path {
-                    margin-left: 20px;
-                    d: path("M0.00380648 0.00268555H1.50315H1.55C1.93069 0.0202563 2.31724 0.19596 2.5808 0.47123L6.00117 3.8916L9.4684 0.47123C9.86666 0.125678 10.1361 0.0143984 10.4992 0.00268555H11.9985V1.50203C11.9985 1.92957 11.9458 2.32784 11.6237 2.62653L8.20333 6.0469L11.5768 9.42042C11.858 9.70155 11.9985 10.0998 11.9985 10.4981V11.9974H10.4992C10.1009 11.9974 9.70267 11.8569 9.42154 11.5757L6.00117 8.15535L2.5808 11.5757C2.29967 11.8569 1.90141 11.9974 1.50315 11.9974H0.00380648V10.4981C0.00380648 10.0998 0.14437 9.70155 0.425496 9.42042L3.84587 6.0469L0.425496 2.62653C0.109228 2.33369 -0.0313351 1.92372 0.00380648 1.50203V0.00268555Z");
+                >svg {
+                    margin: 9px 0px 0px 9px;
+                    width: 18px !important;
+                    height: 18px !important;
+                    overflow: visible;
+
+                    >path {
+                        margin-left: 20px;
+                        d: path("M0.00380648 0.00268555H1.50315H1.55C1.93069 0.0202563 2.31724 0.19596 2.5808 0.47123L6.00117 3.8916L9.4684 0.47123C9.86666 0.125678 10.1361 0.0143984 10.4992 0.00268555H11.9985V1.50203C11.9985 1.92957 11.9458 2.32784 11.6237 2.62653L8.20333 6.0469L11.5768 9.42042C11.858 9.70155 11.9985 10.0998 11.9985 10.4981V11.9974H10.4992C10.1009 11.9974 9.70267 11.8569 9.42154 11.5757L6.00117 8.15535L2.5808 11.5757C2.29967 11.8569 1.90141 11.9974 1.50315 11.9974H0.00380648V10.4981C0.00380648 10.0998 0.14437 9.70155 0.425496 9.42042L3.84587 6.0469L0.425496 2.62653C0.109228 2.33369 -0.0313351 1.92372 0.00380648 1.50203V0.00268555Z");
+                    }
                 }
             }
         }
     }
-}
 
-.keybind_c2b141 {
-    display: none;
-}
-
-
-.sidebarRegion__23e6b {
-    flex: none;
-}
-
-.sidebar__23e6b {
-    width: 270px;
-    padding: 0;
-    overflow: visible !important;
-
-    &::before {
-        content: "Settings";
-        font-size: 16px;
-        font-weight: 600;
-        z-index: 100;
-        height: 46px;
-        align-content: center;
-        text-align: center;
-        width: 278px;
-        position: fixed;
-        pointer-events: none;
-        background-color: var(--gnome-sidebar-background);
-        box-shadow: var(--elevation-low);
-        color: var(--header-primary);
+    .keybind_c2b141 {
+        display: none;
     }
 
-    .side_b3f026 {
+
+    .sidebarRegion__23e6b {
+        flex: none;
+    }
+
+    .sidebar__23e6b {
+        width: 270px;
+        padding: 0;
         overflow: visible !important;
-        padding: 60px 8px 60px 16px;
+
+        &::before {
+            content: "Settings";
+            font-size: 16px;
+            font-weight: 600;
+            z-index: 100;
+            height: 46px;
+            align-content: center;
+            text-align: center;
+            width: 278px;
+            position: fixed;
+            pointer-events: none;
+            background-color: var(--gnome-sidebar-background);
+            box-shadow: var(--elevation-low);
+            color: var(--header-primary);
+        }
+
+        .side_b3f026 {
+            overflow: visible !important;
+            padding: 60px 8px 60px 16px;
+        }
+
     }
 
-}
+    .sidebarRegionScroller__23e6b {
+        background-color: var(--gnome-sidebar-background) !important;
+    }
 
-.sidebarRegionScroller__23e6b {
-    background-color: var(--gnome-sidebar-background) !important;
-}
-
-
-.layer__960e4 {
-    background-color: var(--gnome-card-shade-color) !important;
 }
 
 .baseLayer__960e4 {
@@ -996,10 +708,15 @@ button.colorWhite__201d5:hover,
     transform: scale(1) !important;
 }
 
-/* PROFILES ------------------------------------------ */
+.layers__960e4>.layer__960e4 {
+    background-color: var(--gnome-card-shade-color) !important;
+}
+
+
 .user-profile-modal-v2 {
-    width: auto;
-    max-width: 90vw;
+    width: 500px !important;
+    max-width: 500px !important;
+    min-width: 500px !important;
 }
 
 .user-profile-modal-v2,
@@ -1247,6 +964,10 @@ button.colorWhite__201d5:hover,
                     }
                 }
             }
+
+            &:last-of-type {
+                border-bottom: none;
+            }
         }
     }
 }
@@ -1257,7 +978,6 @@ button.colorWhite__201d5:hover,
 }
 
 
-/* textarea ------------ ---------- - - - - --- --- - - --  - - -  */
 .form_f75fb0 {
     padding: 8px 16px 8px 8px;
     display: flex;
@@ -1265,207 +985,219 @@ button.colorWhite__201d5:hover,
     box-shadow: 0 -1px 0 hsl(0 calc(1*0%) 0.784% /0.2), 0 -1.5px 0 hsl(240 calc(1*7.692%) 2.549% /0.05), 0 -2px 0 hsl(0 calc(1*0%) 0.784% /0.05);
     background-color: var(--background-primary);
 
-    .typing_b88801 {
-        position: relative;
-        width: 100%;
-        left: 0px;
-        top: 0px;
-        max-width: var(--gord-chat-width);
-
-        .dots__5ad89 {
-            display: none;
-        }
-    }
-
-    .channelBottomBarArea_f75fb0 {
-        align-self: center;
-
-        .channelAppLauncher_e6e74f {
-            display: none;
-
-            .button_e6e74f {
-                width: 34px;
-                height: 34px;
-
-                .contents__201d5 .lottieIcon__5eb9b {
-                    width: 16px !important;
-                }
-            }
-        }
-
-        .channelTextArea_f75fb0 {
-            margin: 0 !important;
-            padding: 0 !important;
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-            gap: 0px;
-            overflow: visible !important;
-            border: none;
-
-            .stackedBars__74017 {
-                width: 100%;
-                border-radius: var(--gnome-button-radius);
-
-                .clipContainer__841c8 {
-                    border-radius: var(--gnome-button-radius);
-                    min-height: 34px;
-                }
-            }
-
-            .scrollableContainer__74017 {
-                background: none;
-                width: calc(100% + 8px);
-                align-items: end;
-                overflow: visible !important;
-                overflow-y: scroll !important;
-                min-height: calc(100% + 4px);
-
-                .inner__74017 {
-                    border-radius: var(--gnome-button-radius);
-                    padding: 0px;
-                    gap: 4px;
-                    align-items: flex-end;
-                    overflow: visible !important;
-
-                    .attachWrapper__0923f {
-                        height: 34px;
-                        width: 34px;
-                        align-self: flex-end;
-
-                        .attachButton__0923f {
-                            width: 34px;
-                            height: 34px;
-                            justify-self: end;
-                            padding: 0px !important;
-
-                            .attachButtonInner__0923f svg {
-                                width: 16px !important;
-                            }
-
-                            &:hover {
-                                background-color: var(--gnome-button-hover-background);
-                            }
-                        }
-                    }
-
-                    .buttons__74017 {
-                        gap: 4px;
-                        width: fit-content;
-                        height: 34px;
-                        margin-right: 4px;
-
-                        .expression-picker-chat-input-button,
-                        .button__201d5 {
-                            height: 34px;
-                            width: 34px;
-                            border-radius: var(--gnome-button-radius);
-                            transition: background 0.2s;
-                            margin: 0px;
-
-                            .contents__201d5 .lottieIcon__5eb9b,
-                            .buttonWrapper__24af7 svg,
-                            .spriteContainer__04eed {
-                                width: 16px !important;
-                                height: 16px !important;
-                                --custom-emoji-sprite-size: 16px !important;
-                            }
-
-                            &:hover {
-                                background-color: var(--gnome-button-hover-background);
-                            }
-                        }
-
-                        .separator_aa63ab {
-                            display: none;
-                        }
-
-                        .container_aa63ab>.buttonContainer_aa63ab>.button_aa63ab {
-                            border-radius: 50%;
-                            background-color: var(--brand-500);
-                            transition: opacity 0.2s;
-
-                            .contents__201d5 {
-                                margin-left: 0px;
-
-                                .buttonChild_aa63ab {
-                                    color: var(--gnome-toolbar-icon-fill);
-                                }
-                            }
-
-                            &[disabled] {
-                                opacity: 0.5;
-                            }
-                        }
-                    }
-
-                    .textArea__74017 {
-                        min-height: 34px !important;
-                        align-content: end;
-                        height: 34px;
-
-
-                        .placeholder__1b31f {
-                            display: none;
-                        }
-
-                        .editor__1b31f {
-                            padding: 6px;
-                            min-height: 20px;
-                            border-radius: var(--gnome-button-radius);
-                            background-color: var(--gnome-entry-background);
-                            box-sizing: border-box;
-                            margin-left: 0px !important;
-
-                            >div {
-                                min-height: 22px;
-                            }
-
-                            &:focus::after {
-                                position: absolute;
-                                content: "";
-                                left: -2px;
-                                top: 0px;
-                                width: calc(100%);
-                                height: calc(100% - 2px);
-                                border-radius: calc(var(--gnome-button-radius) + 2px);
-                                border: 2px solid var(--gnome-entry-focused-border-color);
-                                pointer-events: none;
-                            }
-                        }
-                    }
-                }
-
-                &::-webkit-scrollbar {
-                    width: 0px !important;
-                }
-            }
-
-            .floatingBars__74017 {
-                min-height: 0px;
-                margin-bottom: 0px;
-            }
-        }
-    }
-
     &:has(.innerDisabled__74017) {
         display: none;
     }
+}
 
-    .wrapper__44df5 {
-        margin: 0px;
-        background-color: transparent;
+.wrapper__44df5 {
+    margin: 0px;
+    background-color: transparent;
+}
+
+.typing_b88801 {
+    position: relative;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    max-width: var(--gord-chat-width);
+
+}
+
+.wrapper__44df5 {
+    margin: 0px;
+    background-color: transparent;
+}
+
+.channelBottomBarArea_f75fb0 {
+    align-self: center;
+}
+
+
+.channelAppLauncher_e6e74f {
+    display: none;
+
+    .button_e6e74f {
+        width: 34px;
+        height: 34px;
+
+        .contents__201d5 .lottieIcon__5eb9b {
+            width: 16px !important;
+        }
     }
+}
+
+.channelTextArea_f75fb0 {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 0px;
+    overflow: visible !important;
+    border: none;
+}
+
+.stackedBars__74017 {
+    width: 100%;
+    border-radius: var(--gnome-button-radius);
+
+    .clipContainer__841c8 {
+        border-radius: var(--gnome-button-radius);
+        min-height: 34px;
+    }
+}
+
+.scrollableContainer__74017 {
+    background: none;
+    width: calc(100% + 8px);
+    align-items: end;
+    overflow: visible !important;
+    overflow-y: scroll !important;
+    min-height: calc(100% + 4px);
+
+
+
+    &::-webkit-scrollbar {
+        width: 0px !important;
+    }
+}
+
+.inner__74017 {
+    border-radius: var(--gnome-button-radius);
+    padding: 0px;
+    gap: 4px;
+    align-items: flex-end;
+    overflow: visible !important;
+}
+
+.attachWrapper__0923f {
+    height: 34px;
+    width: 34px;
+    align-self: flex-end;
+
+}
+
+.attachButton__0923f {
+    width: 34px;
+    height: 34px;
+    justify-self: end;
+    padding: 0px !important;
+    margin: 0px !important;
+    border-radius: var(--gnome-button-radius);
+
+    &:hover {
+        background-color: var(--gnome-button-hover-background);
+    }
+}
+
+.attachButtonInner__0923f svg {
+    width: 16px !important;
+}
+
+.buttons__74017 {
+    gap: 4px;
+    width: fit-content;
+    height: 34px;
+    margin-right: 4px;
+
+    .expression-picker-chat-input-button,
+    .button__201d5 {
+        height: 34px;
+        width: 34px;
+        border-radius: var(--gnome-button-radius);
+        transition: background 0.2s;
+        margin: 0px;
+
+        .contents__201d5 .lottieIcon__5eb9b,
+        .buttonWrapper__24af7 svg,
+        .spriteContainer__04eed {
+            width: 16px !important;
+            height: 16px !important;
+            --custom-emoji-sprite-size: 16px !important;
+        }
+
+        &:hover {
+            background-color: var(--gnome-button-hover-background);
+        }
+
+        .lottieIcon__5eb9b>svg {
+            margin-top: 2px;
+            margin-left: 3px;
+        }
+
+        .spriteContainer__04eed {
+            margin-left: 1px;
+        }
+    }
+
+    .separator_aa63ab {
+        display: none;
+    }
+
+    .container_aa63ab>.buttonContainer_aa63ab>.button_aa63ab {
+        border-radius: 50%;
+        background-color: var(--brand-500);
+        transition: opacity 0.2s;
+
+        .buttonChild_aa63ab {
+            color: white !important;
+        }
+
+        &[disabled] {
+            opacity: 0.5;
+        }
+    }
+}
+
+.textArea__74017 {
+    min-height: 34px !important;
+    align-content: end;
+    height: 34px;
+
+
+    .placeholder__1b31f {
+        display: none;
+    }
+}
+
+.editor__1b31f {
+    padding: 6px;
+    min-height: 20px;
+    border-radius: var(--gnome-button-radius);
+    background-color: var(--gnome-entry-background);
+    box-sizing: border-box;
+    margin-left: 0px !important;
+
+    >div {
+        min-height: 22px;
+    }
+
+    &:focus::after {
+        position: absolute;
+        content: "";
+        left: -2px;
+        top: 0px;
+        width: calc(100%);
+        height: calc(100% - 2px);
+        border-radius: calc(var(--gnome-button-radius) + 2px);
+        border: 2px solid var(--gnome-entry-focused-border-color);
+        pointer-events: none;
+    }
+}
+
+.floatingBars__74017 {
+    min-height: 0px;
+    margin-bottom: 0px;
 }
 
 .scrollerSpacer__36d07 {
     height: 24px;
 }
 
-
 /* MESSAGES ----------------------------------------------------------------- */
 .messagesWrapper__36d07>.scroller__36d07>.scrollerContent__36d07,
-.form_f75fb0 .channelBottomBarArea_f75fb0 {
+.channelBottomBarArea_f75fb0 {
     width: 100% !important;
     max-width: var(--gord-chat-width);
     justify-self: center;
@@ -1478,10 +1210,10 @@ button.colorWhite__201d5:hover,
 .header_c19a55 {
     display: flex;
     justify-content: space-between;
+}
 
-    .username_c19a55 {
-        font-weight: 700;
-    }
+.username_c19a55 {
+    font-weight: 700;
 }
 
 .buttons__5126c {
@@ -1580,233 +1312,13 @@ button.colorWhite__201d5:hover,
     .item_c1e9c4:not(.checkboxContainer_c1e9c4, [id^="message-add-reaction-"]) .iconContainer_c1e9c4 .icon_c1e9c4 {
         display: none;
     }
+}
 
-    .wrapper_f563df .customItem_c1e9c4 .button_f563df {
-        background-color: transparent;
 
-        &:hover {
-            background-color: var(--gnome-button-hover-background);
-        }
+.wrapper_f563df>.customItem_c1e9c4>.button_f563df {
+    background-color: transparent;
+
+    &:hover {
+        background-color: var(--gnome-button-hover-background);
     }
-}
-
-
-
-
-
-
-
-
-
-/* VOICE ------------------------------------------------ -------------------------------------- */
-
-
-.tile_d6271c {
-    width: 200px !important;
-}
-
-.tileSizer_d6271c {
-    aspect-ratio: 1 / 1;
-    width: 200px;
-}
-
-.tile__2f4f7,
-.background_fb62e2 {
-    background: none !important;
-}
-
-.border__2f4f7 {
-    width: 84px;
-    height: 84px;
-    align-self: center;
-    justify-self: center;
-    border-radius: 100%;
-}
-
-.overlayContainer__2f4f7 {
-    z-index: 100;
-    width: 150px;
-    height: 150px;
-    align-self: center;
-    justify-self: center;
-    gap: 0;
-}
-
-    .overlayBottom__2f4f7 {
-        height: 130px;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-
-        .overlayTitle__2f4f7 {
-            opacity: 1;
-            top: 0;
-            justify-content: center;
-            padding: 6px;
-            margin: 0px !important;
-            background: linear-gradient(to top, black 0%, transparent 100%) !important;
-            border-radius: 0px;
-        }
-
-        .statusContainer__2f4f7 {
-            width: 84px;
-            align-items: end;
-            align-content: end;
-            justify-content: end;
-
-            .status__2f4f7 {
-                backdrop-filter: blur(10px);
-            }
-        }
-    }
-
-.tileChild__2f4f7:has(.videoWrapper__2f4f7) {
-    .overlayContainer__2f4f7 {
-        width: calc(100% - 16px);
-        height: calc(100% - 16px);
-        z-index: auto;
-    }
-
-    .border__2f4f7 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: var(--custom-base-tile-border-radius);
-        pointer-events: none;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.row_d6271c:has(.singleUserRoot__4ad81) {
-    width: 100% !important;
-
-    .tile_d6271c,
-    .tileSizer_d6271c {
-        width: 100% !important;
-        aspect-ratio: auto;
-
-        .singleUserRoot__4ad81 {
-            background: none;
-            padding: 0px;
-
-            img {
-                display: none;
-            }
-
-            .buttonContainer__4ad81 {
-                margin-top: 0px;
-            }
-        }
-    }
-}
-
-.listItems_affa7e {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0px;
-}
-
-.controlSection_bfe55a {
-    opacity: 1 !important;
-    transform: none !important;
-}
-
-/* SERVERLIST  -------------------------------------------------- */
-
-.guilds_c48ade {
-    margin-top: 12px;
-    margin-bottom: 0px !important;
-}
-
-/* CLICKABILITY ISSUES */
-
-.toolbar__9293f,
-.container__49508,
-.hoverableContainer__754bd,
-.titleWrapper__9293f,
-.iconWrapper__9293f {
-    -webkit-app-region: no-drag;
-}
-
-/* UNCENTERED GROUP TITLE */
-
-.hoverableContainer__754bd {
-    align-self: center;
-}
-
-
-/* POPUPS -                --------------------------------------- */
-
-.layer_bc663c .small__49fc1:not(:has(.outer_c0bea0)) {
-    min-height: 0px !important;
-    padding: var(--gnome-dialog-padding);
-    gap: calc(var(--gnome-toolbar-spacing) * 1.5);
-
-    .header__49fc1 {
-        padding: 0px !important;
-        align-content: center;
-        justify-content: center;
-
-        h1[data-text-variant="heading-lg/semibold"] {
-            font-size: 22px;
-            font-weight: 700;
-        }
-    }
-
-    .content__49fc1 {
-        overflow: visible !important;
-        padding: 0px !important;
-
-        [data-text-variant="text-md/normal"] {
-            text-align: center;
-        }
-    }
-
-    .footer__49fc1 {
-        gap: var(--gnome-toolbar-spacing);
-        padding: 0px !important;
-
-        button {
-            border-radius: var(--gnome-card-radius);
-            width: 100%;
-            padding: 16px !important;
-            min-height: 16px !important;
-            height: auto !important;
-            max-height: none !important;
-
-            .contents__201d5 {
-                font-weight: 700;
-            }
-        }
-    }
-}
-
-
-.info__2debe::after {
-    width: 100%;
-    display: block;
-    border-top: 1px solid var(--gnome-card-background);
-    padding-top: 8px;
-    margin-top: 8px;
-    content: "Gord \A Version 3 (48) \A Made by Blade0 \A ✨enjoy✨";
-    text-transform: none;
-    font-family: var(--font-primary);
-    font-size: 12px;
-    line-height: 1.4;
-    font-weight: 400;
-    color: var(--text-muted);
-    white-space: pre;
-}
-
-
-.members_c8ffbb,
-.container_c8ffbb,
-.member__5d473 {
-    background: transparent !important;
-    border: none !important;
-    --custom-channel-members-bg: transparent !important;
 }
