@@ -88,8 +88,6 @@
 
 
 #app-mount {
-
-
   /* Colors */
   --gnome-standalone-color-oklab: min(l, 0.5) a b;
   --gnome-accent-bg: var(--brand-500) !important;

@@ -4,8 +4,8 @@
 
 :root {
   --gord-chat-width: 1000px;       /* The width of the chat on larger than [blank] windows. set to "none" to disable.                                        */
-  --gord-message-actions: none;    /* This removes the quick message actions on a message. Set to "block" to disable this and get your message actions back. */
-  --gord-accent: var(--accent-pink);
+  --gord-message-actions: block;    /* This removes the quick message actions on a message. Set to "block" to disable this and get your message actions back. */
+  --gord-accent: gnome-blue;
 }
 
 

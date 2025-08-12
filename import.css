@@ -1,5 +1,5 @@
 @import url(./src/colorvars.css);
-@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Google.css);
+/* @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Google.css); */
 
 :root {
     --gord-chat-width: 1000px;
@@ -8,7 +8,7 @@
 }
 
 @property --gord-accent {
-    syntax: "<color> | gnome-blue | gnome-green | gnome-orange | gnome-purple | gnome-red | gnome-yellow";
+    syntax: "<color> | gnome-blue | gnome-green | gnome-orange | gnome-purple | gnome-red | gnome-yellow | gnome-teal | gnome-pink | gnome-slate";
     initial-value: gnome-blue;
 }
 
@@ -23,7 +23,6 @@
 @container style(--gord-accent: gnome-blue) {
     #app-mount {
         --brand-500: var(--accent-blue) !important;
-
     }
 }
 
@@ -35,7 +34,6 @@
 
 @container style(--gord-accent: gnome-orange) {
     #app-mount {
-
         --brand-500: var(--accent-orange) !important;
     }
 }
@@ -43,7 +41,6 @@
 @container style(--gord-accent: gnome-purple) {
     #app-mount {
         --brand-500: var(--accent-purple) !important;
-
     }
 }
 
@@ -58,6 +55,22 @@
         --brand-500: var(--accent-yellow) !important;
     }
 }
+@container style(--gord-accent: gnome-teal) {
+    #app-mount {
+        --brand-500: var(--accent-teal) !important;
+    }
+}
+@container style(--gord-accent: gnome-pink) {
+    #app-mount {
+        --brand-500: var(--accent-pink) !important;
+    }
+}
+@container style(--gord-accent: gnome-slate) {
+    #app-mount {
+        --brand-500: var(--accent-slate) !important;
+    }
+}
+
 
 #app-mount {
     --brand-200: var(--brand-100);
@@ -146,7 +159,9 @@ html {
 
 .tabBody__133bf,
 .peopleColumn__133bf,
-.container__7d20c {
+.container__7d20c,
+.contentRegion__23e6b,
+.chat_f75fb0 {
     background: var(--gnome-view-background);
 }
 
@@ -399,6 +414,7 @@ html {
 .container__37e49 {
     justify-content: center;
     /* flex-direction: row-reverse; */
+    padding: 4px !important;
     padding-left: 30px !important;
     padding-right: 30px !important;
 }
@@ -415,7 +431,7 @@ html {
     border: none;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
     background: var(--gnome-sidebar-background);
-    filter: drop-shadow(0px -1px var(--gnome-secondary-sidebar-border-color));
+    filter: drop-shadow(0px -1px color-mix(in srgb, var(--gnome-secondary-sidebar-border-color), transparent 45%));
 }
 
 .sidebar_c48ade:after {
@@ -449,7 +465,7 @@ html {
 
 .trailing_c38106 {
     position: fixed !important;
-    top: 8px;
+    top: 30px;
     right: 12px;
     z-index: 200;
     -webkit-app-region: no-drag !important;
@@ -577,5 +593,732 @@ html {
             height: auto !important;
             padding: 12px 17px !important;
         }
+    }
+}
+
+
+.standardSidebarView__23e6b {
+    position: absolute;
+    width: 100vw;
+    max-width: 1000px !important;
+    height: 75vh;
+    z-index: 4000;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    border: rgba(255, 255, 255, 0.1) 1px solid;
+
+
+    .contentRegion__23e6b {
+        width: calc(100% - 270px);
+        display: block;
+        flex: none;
+    }
+
+    .toolsContainer__23e6b {
+        margin: 0;
+        position: absolute;
+        right: 0px;
+        top: 0;
+        flex: none;
+        background-color: var(--gnome-view-background) !important;
+        padding: 0px;
+        margin: 0px !important;
+        height: 46px;
+        width: 100%;
+        box-shadow: var(--elevation-low);
+
+        .tools__23e6b {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            z-index: 5000;
+
+            .closeButton_c2b141 {
+                border-radius: 50%;
+                background-color: var(--gnome-button-background);
+                color: var(--gnome-toolbar-icon-fill);
+                height: 25px !important;
+                width: 25px !important;
+                border: none;
+                flex: none;
+
+                >svg {
+                    margin: 9px 0px 0px 9px;
+                    width: 18px !important;
+                    height: 18px !important;
+                    overflow: visible;
+
+                    >path {
+                        margin-left: 20px;
+                        d: path("M0.00380648 0.00268555H1.50315H1.55C1.93069 0.0202563 2.31724 0.19596 2.5808 0.47123L6.00117 3.8916L9.4684 0.47123C9.86666 0.125678 10.1361 0.0143984 10.4992 0.00268555H11.9985V1.50203C11.9985 1.92957 11.9458 2.32784 11.6237 2.62653L8.20333 6.0469L11.5768 9.42042C11.858 9.70155 11.9985 10.0998 11.9985 10.4981V11.9974H10.4992C10.1009 11.9974 9.70267 11.8569 9.42154 11.5757L6.00117 8.15535L2.5808 11.5757C2.29967 11.8569 1.90141 11.9974 1.50315 11.9974H0.00380648V10.4981C0.00380648 10.0998 0.14437 9.70155 0.425496 9.42042L3.84587 6.0469L0.425496 2.62653C0.109228 2.33369 -0.0313351 1.92372 0.00380648 1.50203V0.00268555Z");
+                    }
+                }
+            }
+        }
+    }
+
+    .keybind_c2b141 {
+        display: none;
+    }
+
+
+    .sidebarRegion__23e6b {
+        flex: none;
+    }
+
+    .sidebar__23e6b {
+        width: 270px;
+        padding: 0;
+        overflow: visible !important;
+
+        &::before {
+            content: "Settings";
+            font-size: 16px;
+            font-weight: 600;
+            z-index: 100;
+            height: 46px;
+            align-content: center;
+            text-align: center;
+            width: 278px;
+            position: fixed;
+            pointer-events: none;
+            background-color: var(--gnome-sidebar-background);
+            box-shadow: var(--elevation-low);
+            color: var(--header-primary);
+        }
+
+        .side_b3f026 {
+            overflow: visible !important;
+            padding: 60px 8px 60px 16px;
+        }
+
+    }
+
+    .sidebarRegionScroller__23e6b {
+        background-color: var(--gnome-sidebar-background) !important;
+    }
+
+}
+
+.baseLayer__960e4 {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+.layers__960e4>.layer__960e4 {
+    background-color: var(--gnome-card-shade-color) !important;
+}
+
+
+.user-profile-modal-v2 {
+    width: 500px !important;
+    max-width: 500px !important;
+    min-width: 500px !important;
+}
+
+.user-profile-modal-v2,
+.user-profile-popout,
+.user-profile-sidebar {
+
+    .inner_c0bea0 {
+        padding: 0px !important;
+        flex-direction: column;
+        overflow-y: scroll;
+        width: auto !important;
+        gap: 0px;
+
+        .backgroundImage__9c3be {
+            display: none;
+        }
+
+        .container__37bfc {
+            padding: 12px 24px 24px;
+            max-width: calc(500px - 24px * 2) !important;
+            height: auto !important;
+            overflow: visible !important;
+            --profile-gradient-start:
+                color-mix(in oklab, var(--profile-gradient-overlay-color) 55%, var(--profile-gradient-primary-color));
+            --profile-gradient-end:
+                color-mix(in oklab, var(--profile-gradient-overlay-color) 55%, var(--profile-gradient-secondary-color));
+            background-color: var(--background-surface-high) !important;
+            background: linear-gradient(to top, var(--profile-gradient-start), var(--profile-gradient-start) 0%, var(--profile-gradient-end) 100%);
+
+            .scroller__37bfc {
+                overflow: visible !important;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+    }
+
+    .profileScroller__9c3be {
+        overflow: visible !important;
+    }
+
+    .avatar__75742 {
+        justify-self: center !important;
+        align-self: center;
+        left: calc(25% * 1.5);
+        top: calc(58px * 1.25);
+        scale: 1.1;
+    }
+
+    .container__63ed3>.usernameRow__63ed3,
+    .container__63ed3>.tags__63ed3 {
+        align-content: center;
+        justify-content: center;
+
+        .nickname__63ed3 {
+            font-family: system-ui !important;
+            font-size: 28px;
+            font-weight: 800;
+        }
+    }
+
+    .profileButtons__9c3be {
+        --custom-button-button-sm-height: 44px !important;
+
+        .primary_fb7f94 {
+            width: 100%;
+        }
+    }
+
+    .mask__68edb>foreignObject {
+        mask: none;
+    }
+
+    .container_ab8609 {
+        top: 20px !important;
+        left: calc(25% * 1.5 - 28px) !important;
+
+        .outer_ab8609 {
+            &::before {
+                top: unset;
+                bottom: -8px;
+            }
+
+            &::after {
+                top: unset;
+                bottom: -23px;
+                left: 20px !important;
+            }
+        }
+    }
+
+    .profile__9c3be {
+        box-shadow: none !important;
+    }
+}
+
+.root__49fc1:has(.user-profile-modal-v2),
+.user-profile-modal-v2 .inner_c0bea0,
+.user-profile-modal-v2 .container__37bfc,
+.user-profile-modal-v2 .profile__9c3be {
+    max-width: 90vw !important;
+    width: 500px;
+}
+
+
+.section_bf424d:has(.memberSinceWrapper_c4eb81),
+.section_bf424d:has(> div[class="defaultColor__4bd52 text-sm/normal_cf4812"]) {
+    /* height: 56px!important; */
+    padding: 16px;
+    border-radius: var(--gnome-card-radius);
+    /* justify-content: center; */
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--gnome-card-background);
+    border: 1px solid var(--gnome-card-shade-color);
+
+    .headings_bf424d {
+        align-content: center !important;
+
+        h2[data-text-variant="text-xs/medium"] {
+            font-size: 14px !important;
+        }
+    }
+}
+
+.profileRolesSection__9c3be {
+    /* height: 56px!important; */
+    padding: 16px;
+    border-radius: var(--gnome-card-radius);
+    /* justify-content: center; */
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--gnome-card-background);
+    border: 1px solid var(--gnome-card-shade-color);
+
+    .headings_bf424d {
+        /* align-content: center !important; */
+
+        h2[data-text-variant="text-xs/medium"] {
+            font-size: 14px !important;
+        }
+    }
+
+    .root_af8192 {
+        justify-items: flex-end !important;
+        justify-content: flex-end !important;
+
+        .roleName_dfa8b6 .overflow__82b15 {
+            color: black !important;
+        }
+
+        .role_dfa8b6.pill_dfa8b6 {
+            position: relative;
+            background: none;
+            border: none;
+
+            padding-left: 8px;
+        }
+
+        .role_dfa8b6:has(.roleRemoveButtonCanRemove_dfa8b6):hover {
+            padding-left: 28px !important;
+
+            .roleCircle__4f569 {
+                margin: 6px 8px;
+                width: 12px !important;
+                height: 12px !important;
+            }
+        }
+
+        .role_dfa8b6.pill_dfa8b6>span {
+            z-index: 1;
+        }
+
+        .role_dfa8b6.pill_dfa8b6 .roleRemoveButton_dfa8b6 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: 0 !important;
+        }
+
+        .role_dfa8b6.pill_dfa8b6 .roleCircle__4f569 {
+            margin: 6px 8px;
+            width: 0px;
+            height: 0px;
+        }
+
+        .role_dfa8b6.pill_dfa8b6 .roleCircle__4f569::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: inherit;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            border-radius: var(--radius-xs);
+            /* opacity: 0.25; */
+        }
+
+        .roleRemoveButtonCanRemove_dfa8b6 .roleRemoveIcon_dfa8b6 {
+            left: 12px !important;
+            top: 10px !important;
+            padding: 2px;
+            background-color: rgba(121, 121, 121, 0.25);
+            border-radius: 50%;
+        }
+    }
+}
+
+.section_bf424d:has(.connection__9bfb9) {
+    .container__9bfb9 {
+        background-color: var(--gnome-card-background);
+        border: 1px solid var(--gnome-card-shade-color);
+        border-radius: var(--gnome-card-radius);
+        gap: 0px;
+
+        .connection__9bfb9 {
+            padding: 16px;
+            max-height: 24px;
+            border-bottom: 1px solid var(--gnome-card-shade-color);
+
+            .connectionInfo__9bfb9 {
+                width: 100%;
+                justify-content: space-between !important;
+                flex-direction: row;
+
+                >div:not(.metadata__9bfb9) {
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+
+                    >[data-text-variant="text-xs/normal"] {
+                        display: none;
+                    }
+
+                    .platformUrlAnchor__9bfb9,
+                    .accountNameText__9bfb9 {
+                        align-self: center;
+                        justify-self: center;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.headings_bf424d>.header_bf424d>h2 {
+    font-size: 14px !important;
+    font-weight: 600;
+}
+
+
+.form_f75fb0 {
+    padding: 8px 16px 8px 8px;
+    display: flex;
+    flex-direction: column-reverse;
+    box-shadow: 0 -1px 0 hsl(0 calc(1*0%) 0.784% /0.2), 0 -1.5px 0 hsl(240 calc(1*7.692%) 2.549% /0.05), 0 -2px 0 hsl(0 calc(1*0%) 0.784% /0.05);
+    background-color: var(--background-primary);
+
+    &:has(.innerDisabled__74017) {
+        display: none;
+    }
+}
+
+.wrapper__44df5 {
+    margin: 0px;
+    background-color: transparent;
+}
+
+.typing_b88801 {
+    position: relative;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    max-width: var(--gord-chat-width);
+
+}
+
+.wrapper__44df5 {
+    margin: 0px;
+    background-color: transparent;
+}
+
+.channelBottomBarArea_f75fb0 {
+    align-self: center;
+}
+
+
+.channelAppLauncher_e6e74f {
+    display: none;
+
+    .button_e6e74f {
+        width: 34px;
+        height: 34px;
+
+        .contents__201d5 .lottieIcon__5eb9b {
+            width: 16px !important;
+        }
+    }
+}
+
+.channelTextArea_f75fb0 {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 0px;
+    overflow: visible !important;
+    border: none;
+}
+
+.stackedBars__74017 {
+    width: 100%;
+    border-radius: var(--gnome-button-radius);
+
+    .clipContainer__841c8 {
+        border-radius: var(--gnome-button-radius);
+        min-height: 34px;
+    }
+}
+
+.scrollableContainer__74017 {
+    background: none;
+    width: calc(100% + 8px);
+    align-items: end;
+    overflow: visible !important;
+    overflow-y: scroll !important;
+    min-height: calc(100% + 4px);
+
+
+
+    &::-webkit-scrollbar {
+        width: 0px !important;
+    }
+}
+
+.inner__74017 {
+    border-radius: var(--gnome-button-radius);
+    padding: 0px;
+    gap: 4px;
+    align-items: flex-end;
+    overflow: visible !important;
+}
+
+.attachWrapper__0923f {
+    height: 34px;
+    width: 34px;
+    align-self: flex-end;
+
+}
+
+.attachButton__0923f {
+    width: 34px;
+    height: 34px;
+    justify-self: end;
+    padding: 0px !important;
+    margin: 0px !important;
+    border-radius: var(--gnome-button-radius);
+
+    &:hover {
+        background-color: var(--gnome-button-hover-background);
+    }
+}
+
+.attachButtonInner__0923f svg {
+    width: 16px !important;
+}
+
+.buttons__74017 {
+    gap: 4px;
+    width: fit-content;
+    height: 34px;
+    margin-right: 4px;
+
+    .expression-picker-chat-input-button,
+    .button__201d5 {
+        height: 34px;
+        width: 34px;
+        border-radius: var(--gnome-button-radius);
+        transition: background 0.2s;
+        margin: 0px;
+
+        .contents__201d5 .lottieIcon__5eb9b,
+        .buttonWrapper__24af7 svg,
+        .spriteContainer__04eed {
+            width: 16px !important;
+            height: 16px !important;
+            --custom-emoji-sprite-size: 16px !important;
+        }
+
+        &:hover {
+            background-color: var(--gnome-button-hover-background);
+        }
+
+        .lottieIcon__5eb9b>svg {
+            margin-top: 2px;
+            margin-left: 3px;
+        }
+
+        .spriteContainer__04eed {
+            margin-left: 1px;
+        }
+    }
+
+    .separator_aa63ab {
+        display: none;
+    }
+
+    .container_aa63ab>.buttonContainer_aa63ab>.button_aa63ab {
+        border-radius: 50%;
+        background-color: var(--brand-500);
+        transition: opacity 0.2s;
+
+        .buttonChild_aa63ab {
+            color: white !important;
+        }
+
+        &[disabled] {
+            opacity: 0.5;
+        }
+    }
+}
+
+.textArea__74017 {
+    min-height: 34px !important;
+    align-content: end;
+    height: 34px;
+
+
+    .placeholder__1b31f {
+        display: none;
+    }
+}
+
+.editor__1b31f {
+    padding: 6px;
+    min-height: 20px;
+    border-radius: var(--gnome-button-radius);
+    background-color: var(--gnome-entry-background);
+    box-sizing: border-box;
+    margin-left: 0px !important;
+
+    >div {
+        min-height: 22px;
+    }
+
+    &:focus::after {
+        position: absolute;
+        content: "";
+        left: -2px;
+        top: 0px;
+        width: calc(100%);
+        height: calc(100% - 2px);
+        border-radius: calc(var(--gnome-button-radius) + 2px);
+        border: 2px solid var(--gnome-entry-focused-border-color);
+        pointer-events: none;
+    }
+}
+
+.floatingBars__74017 {
+    min-height: 0px;
+    margin-bottom: 0px;
+}
+
+.scrollerSpacer__36d07 {
+    height: 24px;
+}
+
+/* MESSAGES ----------------------------------------------------------------- */
+.messagesWrapper__36d07>.scroller__36d07>.scrollerContent__36d07,
+.channelBottomBarArea_f75fb0 {
+    width: 100% !important;
+    max-width: var(--gord-chat-width);
+    justify-self: center;
+
+    &:hover {
+        background-color: transparent !important;
+    }
+}
+
+.header_c19a55 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.username_c19a55 {
+    font-weight: 700;
+}
+
+.buttons__5126c {
+    display: var(--gord-message-actions);
+}
+
+.mentioned__5126c {
+    background-color: var(--gnome-selection-bg);
+    border-radius: var(--gnome-button-radius);
+
+    &::before {
+        display: none;
+    }
+
+    &:hover {
+        background-color: var(--gnome-selection-bg) !important;
+    }
+}
+
+.timestampVisibleOnHover_c19a55 {
+    position: absolute !important;
+    right: 20px !important;
+    text-align: left !important;
+    left: auto !important;
+
+    time {
+        font-size: 0.75rem !important;
+    }
+}
+
+.jumpToPresentBar__0f481 {
+    bottom: 16px !important;
+    right: 20px !important;
+    left: auto !important;
+    padding-bottom: 0px !important;
+    padding: 4px !important;
+    opacity: 1 !important;
+    border-radius: 20px !important;
+    width: fit-content !important;
+    padding: 8px !important;
+    margin: 0px !important;
+    background-color: var(--gnome-card-shade-color) !important;
+    min-width: 0px !important;
+    border: none !important;
+
+    .barButtonMain__0f481 {
+        flex: none;
+    }
+
+    .button__201d5 {
+        font-size: 0;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: transparent !important;
+
+        &:hover {
+            background-color: var(--gnome-button-background) !important;
+        }
+    }
+}
+
+.barButtonBase__0f481 {
+    padding: 0 8px;
+}
+
+.newMessagesBar__0f481 {
+    justify-self: center;
+    top: 4px;
+    padding-bottom: 0px;
+    padding: 4px;
+    opacity: 1 !important;
+    border-radius: 20px;
+    width: fit-content;
+
+    /* background-color: var(--gnome-card-shade-color); */
+}
+
+.barButtonMain__0f481 {
+    flex: none;
+}
+
+.barButtonAlt__0f481 {
+    font-size: 0;
+
+    .barButtonIcon__0f481 {
+        margin: 0;
+    }
+}
+
+/* CONTEXT MENUS -------------- */
+.menu_c1e9c4 {
+    background: var(--gnome-menu-background);
+    border-radius: 10px;
+
+    .item_c1e9c4:not(.checkboxContainer_c1e9c4, [id^="message-add-reaction-"]) .iconContainer_c1e9c4 .icon_c1e9c4 {
+        display: none;
+    }
+}
+
+
+.wrapper_f563df>.customItem_c1e9c4>.button_f563df {
+    background-color: transparent;
+
+    &:hover {
+        background-color: var(--gnome-button-hover-background);
     }
 }

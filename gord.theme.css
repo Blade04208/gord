@@ -3,7 +3,7 @@
  * @description Libadwatia/GNOME styling in discord.
  * @author Blade0
  * @authorId 1124341362955919371
- * @version 3.1
+ * @version 4.0
  * @updateUrl https://blade04208.github.io/gord/gord.theme.css
  * @source https://github.com/Blade04208/gord
  * @invite KEcCnVuTV7
@@ -12,7 +12,13 @@
 @import url(https://blade04208.github.io/gord/import.css);
 
 :root {
-    --gord-chat-width: 1000px;       /* The width of the chat on larger than [blank] windows. set to "none" to disable.                                        */
-    --gord-message-actions: none;    /* This removes the quick message actions on a message. Set to "block" to disable this and get your message actions back. */
-    --gord-accent: gnome-blue;       /* This is the accent color of Discord. Syntax: <any hex color> | gnome-blue | gnome-green | gnome-orange | gnome-purple | gnome-red | gnome-yellow */
+    --gord-chat-width: 1000px;       
+    /* The width of the chat on larger than [blank] windows. 
+    set to "none" to disable.                                                                                                          */
+    --gord-message-actions: none;    
+    /* This removes the quick message actions on a message. 
+    Set to "block" to disable this and get your message actions back.                                                                  */
+    --gord-accent: gnome-blue;       
+    /* This is the accent color of Discord. 
+    Syntax: <any color> | gnome-blue | gnome-green | gnome-orange | gnome-purple | gnome-red | gnome-yellow | gnome-pink | gnome-slate */
 }
