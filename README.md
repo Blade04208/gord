@@ -1,3 +1,6 @@
+# GORD IS NOW DEPRECATED, PLEASE USE https://github.com/ricewind012/discord-gnome-theme INSTEAD
+
+
 # Gord
 Libadwatia/GNOME styling in discord.
 
